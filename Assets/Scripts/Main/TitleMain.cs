@@ -7,15 +7,6 @@ namespace Main
 {
     public sealed class TitleMain : MainBase
     {
-        // GameObject Name
-        private const string CanvasRootName = "CanvasRoot";
-        private const string CameraRootName = "CameraRoot";
-
-        // Path
-        private const string UITitleBackgroundWindowPath = "UI/Title/UITitleBackgroundWindow";
-        private const string App0CanvasPath = "Canvases/App0Canvas";
-        private const string TitleCameraPath = "Cameras/TitleCamera";
-
         protected override void Inject()
         {
         }
@@ -37,23 +28,23 @@ namespace Main
         private void BuildHierarchy()
         {
             var titleCamera = BuildCameras();
-            
+
             BuildCanvases(titleCamera);
         }
 
         private void BuildCanvases(ICamera titleCamera)
         {
-            var canvasRoot = EmptyObjectFactory.Create(CanvasRootName, transform);
-            var app0Canvas = PrefabFactory.Create<AppCanvas>(App0CanvasPath, canvasRoot.transform);
+            var canvasRoot = EmptyObjectFactory.Create(TitleDef.CanvasRootName, transform);
+            var app0Canvas = PrefabFactory.Create<AppCanvas>(TitleDef.App0CanvasPath, canvasRoot.transform);
             app0Canvas.SetCamera(titleCamera);
 
-            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleBackgroundWindowPath, app0Canvas.transform);
+            PrefabFactory.Create<UITitleBackGroundWindow>(TitleDef.UITitleBackgroundWindowPath, app0Canvas.transform);
         }
 
         private TitleCamera BuildCameras()
         {
-            var cameraRoot = EmptyObjectFactory.Create(CameraRootName, transform);
-            var titleCamera = PrefabFactory.Create<TitleCamera>(TitleCameraPath, cameraRoot.transform);
+            var cameraRoot = EmptyObjectFactory.Create(TitleDef.CameraRootName, transform);
+            var titleCamera = PrefabFactory.Create<TitleCamera>(TitleDef.TitleCameraPath, cameraRoot.transform);
             return titleCamera;
         }
     }
