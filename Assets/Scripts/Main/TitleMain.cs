@@ -1,14 +1,20 @@
-﻿using System.Text;
+﻿using Cameras;
+using Canvases;
 using PrefabGenerator;
 using UI.Title;
-using UnityEngine;
 
 namespace Main
 {
     public sealed class TitleMain : MainBase
     {
-        private const string CanvasRoot = "CanvasRoot";
-        private const string UITitleBackgroundWindow = "UI/Title/UITitleBackgroundWindow";
+        // GameObject Name
+        private const string CanvasRootName = "CanvasRoot";
+        private const string CameraRootName = "CameraRoot";
+
+        // Path
+        private const string UITitleBackgroundWindowPath = "UI/Title/UITitleBackgroundWindow";
+        private const string App0CanvasPath = "Canvases/App0Canvas";
+        private const string TitleCameraPath = "Cameras/TitleCamera";
 
         protected override void Inject()
         {
@@ -16,14 +22,21 @@ namespace Main
 
         protected override void OnAwake()
         {
+            // Instantiate Roots
+            var canvasRoot = EmptyObjectFactory.Create(CanvasRootName);
+            var cameraRoot = EmptyObjectFactory.Create(CameraRootName);
+
+            // Instantiate Camera Prefab
+            PrefabFactory.Create<TitleCamera>(TitleCameraPath, cameraRoot.transform);
+
+            // Instantiate Canvases
+            var app0Canvas = PrefabFactory.Create<AppCanvas>(App0CanvasPath, canvasRoot.transform);
+
+            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleBackgroundWindowPath, app0Canvas.transform);
         }
 
         protected override void OnStart()
         {
-            var canvasRoot = EmptyObjectFactory.Create(CanvasRoot);
-            var titleCanvas = EmptyObjectFactory.Create("TitleCanvas", canvasRoot.transform);
-            titleCanvas.AddComponent<Canvas>();
-            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleBackgroundWindow, titleCanvas.transform);
         }
 
         protected override void OnUpdate()
