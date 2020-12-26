@@ -1,0 +1,3 @@
+[submodule "LocalPackages/PrefabGenerator"]
+	path = LocalPackages/PrefabGenerator
+	url = https://github.com/VeyronSakai/PrefabGenerator.git
