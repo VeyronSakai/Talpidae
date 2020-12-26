@@ -13,7 +13,7 @@ namespace OutGame
             _parentTransform = parentTransform;
         }
 
-        public ICamera GetCamera()
+        public ICamera BuildCamera()
         {
             var cameraRoot = EmptyObjectFactory.Create(UITitleCommonDef.CameraRootName, _parentTransform);
             var titleCamera = PrefabFactory.Create<TitleCamera>(UITitleCommonDef.TitleCameraPath, cameraRoot.transform);

@@ -13,7 +13,7 @@
 
         public void BuildHierarchy()
         {
-            var titleCamera = _cameraBuilder.GetCamera();
+            var titleCamera = _cameraBuilder.BuildCamera();
 
             _canvasBuilder.BuildCanvas(titleCamera);
         }
