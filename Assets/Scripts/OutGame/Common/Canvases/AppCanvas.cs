@@ -1,8 +1,8 @@
-﻿using OutGame.Cameras;
+﻿using OutGame.Common.Cameras;
 using PrefabGenerator;
 using UnityEngine;
 
-namespace OutGame.Canvases
+namespace OutGame.Common.Canvases
 {
     public class AppCanvas : PrefabBase
     {

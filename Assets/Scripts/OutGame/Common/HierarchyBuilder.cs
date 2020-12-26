@@ -1,4 +1,7 @@
-﻿namespace OutGame
+﻿using OutGame.Common.Cameras;
+using OutGame.Common.Canvases;
+
+namespace OutGame.Common
 {
     public sealed class HierarchyBuilder
     {

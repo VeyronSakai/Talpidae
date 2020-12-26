@@ -1,11 +1,10 @@
-﻿using OutGame.Cameras;
-using OutGame.Canvases;
+﻿using OutGame.Common.Cameras;
 using PrefabGenerator;
 using UI.Title;
 using UI.Title.Def;
 using UnityEngine;
 
-namespace OutGame
+namespace OutGame.Common.Canvases
 {
     public sealed class CanvasBuilder
     {

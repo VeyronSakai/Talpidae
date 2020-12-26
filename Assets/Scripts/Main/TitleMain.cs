@@ -1,4 +1,7 @@
 ﻿using OutGame;
+using OutGame.Common;
+using OutGame.Common.Cameras;
+using OutGame.Common.Canvases;
 
 namespace Main
 {

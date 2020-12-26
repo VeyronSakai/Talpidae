@@ -1,13 +1,13 @@
-﻿using PrefabGenerator;
+﻿using OutGame.Common.Cameras;
 using UnityEngine;
 
-namespace OutGame.Cameras
+namespace OutGame
 {
-    public class TitleCamera : PrefabBase, ICamera
+    public class TitleCamera : CameraBase
     {
         private Camera _titleRawCamera;
 
-        public Camera GetRawCamera()
+        public override Camera GetRawCamera()
         {
             if (_titleRawCamera == null)
             {

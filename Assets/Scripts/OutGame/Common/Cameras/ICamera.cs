@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OutGame.Cameras
+namespace OutGame.Common.Cameras
 {
     public interface ICamera
     {
