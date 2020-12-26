@@ -36,10 +36,8 @@ namespace Main
 
         private void BuildHierarchy()
         {
-            // Build Cameras
             var titleCamera = BuildCameras();
-
-            // Build Canvas
+            
             BuildCanvases(titleCamera);
         }
 
