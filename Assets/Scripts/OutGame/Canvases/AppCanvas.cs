@@ -1,8 +1,8 @@
-﻿using Cameras;
+﻿using OutGame.Cameras;
 using PrefabGenerator;
 using UnityEngine;
 
-namespace Canvases
+namespace OutGame.Canvases
 {
     public class AppCanvas : PrefabBase
     {
@@ -24,6 +24,7 @@ namespace Canvases
             {
                 _rawCanvas = GetComponent<Canvas>();
             }
+
             _rawCanvas.worldCamera = targetCamera.GetRawCamera();
         }
     }

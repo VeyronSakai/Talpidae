@@ -1,7 +1,7 @@
 ﻿using PrefabGenerator;
 using UnityEngine;
 
-namespace Cameras
+namespace OutGame.Cameras
 {
     public class TitleCamera : PrefabBase, ICamera
     {

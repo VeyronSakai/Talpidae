@@ -1,5 +1,4 @@
-﻿using PrefabGenerator;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Main
 {

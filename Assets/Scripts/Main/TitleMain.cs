@@ -1,19 +1,23 @@
-﻿using Cameras;
-using Canvases;
-using PrefabGenerator;
-using UI.Title;
+﻿using OutGame;
 
 namespace Main
 {
     public sealed class TitleMain : MainBase
     {
+        private HierarchyBuilder _hierarchyBuilder;
+
         protected override void Inject()
         {
+            var titleMainTransform = transform;
+
+            var titleCameraBuilder = new CameraBuilder(titleMainTransform);
+            var canvasBuilder = new CanvasBuilder(titleMainTransform);
+            _hierarchyBuilder = new HierarchyBuilder(titleCameraBuilder, canvasBuilder);
         }
 
         protected override void OnAwake()
         {
-            BuildHierarchy();
+            _hierarchyBuilder.BuildHierarchy();
         }
 
         protected override void OnStart()
@@ -22,30 +26,6 @@ namespace Main
 
         protected override void OnUpdate()
         {
-        }
-
-
-        private void BuildHierarchy()
-        {
-            var titleCamera = BuildCameras();
-
-            BuildCanvases(titleCamera);
-        }
-
-        private void BuildCanvases(ICamera titleCamera)
-        {
-            var canvasRoot = EmptyObjectFactory.Create(TitleDef.CanvasRootName, transform);
-            var app0Canvas = PrefabFactory.Create<AppCanvas>(TitleDef.App0CanvasPath, canvasRoot.transform);
-            app0Canvas.SetCamera(titleCamera);
-
-            PrefabFactory.Create<UITitleBackGroundWindow>(TitleDef.UITitleBackgroundWindowPath, app0Canvas.transform);
-        }
-
-        private TitleCamera BuildCameras()
-        {
-            var cameraRoot = EmptyObjectFactory.Create(TitleDef.CameraRootName, transform);
-            var titleCamera = PrefabFactory.Create<TitleCamera>(TitleDef.TitleCameraPath, cameraRoot.transform);
-            return titleCamera;
         }
     }
 }
