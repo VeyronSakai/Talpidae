@@ -22,17 +22,7 @@ namespace Main
 
         protected override void OnAwake()
         {
-            // Instantiate Roots
-            var canvasRoot = EmptyObjectFactory.Create(CanvasRootName);
-            var cameraRoot = EmptyObjectFactory.Create(CameraRootName);
-
-            // Instantiate Camera Prefab
-            PrefabFactory.Create<TitleCamera>(TitleCameraPath, cameraRoot.transform);
-
-            // Instantiate Canvases
-            var app0Canvas = PrefabFactory.Create<AppCanvas>(App0CanvasPath, canvasRoot.transform);
-
-            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleBackgroundWindowPath, app0Canvas.transform);
+            BuildHierarchy();
         }
 
         protected override void OnStart()
@@ -41,6 +31,32 @@ namespace Main
 
         protected override void OnUpdate()
         {
+        }
+
+
+        private void BuildHierarchy()
+        {
+            // Build Cameras
+            var titleCamera = BuildCameras();
+
+            // Build Canvas
+            BuildCanvases(titleCamera);
+        }
+
+        private void BuildCanvases(ICamera titleCamera)
+        {
+            var canvasRoot = EmptyObjectFactory.Create(CanvasRootName, transform);
+            var app0Canvas = PrefabFactory.Create<AppCanvas>(App0CanvasPath, canvasRoot.transform);
+            app0Canvas.SetCamera(titleCamera);
+
+            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleBackgroundWindowPath, app0Canvas.transform);
+        }
+
+        private TitleCamera BuildCameras()
+        {
+            var cameraRoot = EmptyObjectFactory.Create(CameraRootName, transform);
+            var titleCamera = PrefabFactory.Create<TitleCamera>(TitleCameraPath, cameraRoot.transform);
+            return titleCamera;
         }
     }
 }
