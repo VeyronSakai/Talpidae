@@ -2,6 +2,6 @@
 {
     public static class UITitleDef
     {
-        public static readonly string UITitleBackgroundWindowPath = "UI/Title/UITitleBackgroundWindow";
+        public static readonly string UITitleBackgroundWindowPath = "UI/Prefabs/Title/UITitleBackgroundWindow";
     }
 }
