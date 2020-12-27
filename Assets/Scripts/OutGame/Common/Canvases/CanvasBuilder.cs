@@ -1,8 +1,7 @@
 ﻿using OutGame.Common.Cameras;
 using OutGame.Title;
 using PrefabGenerator;
-using UI.Title;
-using UI.Title.Def;
+using UI.Presenter.Title;
 using UnityEngine;
 
 namespace OutGame.Common.Canvases
@@ -23,7 +22,8 @@ namespace OutGame.Common.Canvases
                 PrefabFactory.Create<AppCanvas>(UITitleCommonDef.App0CanvasPrefabPath, canvasRoot.transform);
             app0Canvas.SetCamera(renderCamera);
 
-            PrefabFactory.Create<UITitleBackGroundWindow>(UITitleDef.UITitleBackgroundWindowPath, app0Canvas.transform);
+            // TODO: Factory Method に切り出す
+            var presenter = new UITitleBackGroundPresenter(app0Canvas.transform);
         }
     }
 }

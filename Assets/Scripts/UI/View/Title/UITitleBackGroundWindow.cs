@@ -4,7 +4,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Title
+namespace UI.View.Title
 {
     public sealed class UITitleBackGroundWindow : PrefabBase
     {

@@ -1,4 +1,4 @@
-﻿namespace UI.Title.Def
+﻿namespace UI.View.Title.Def
 {
     public static class UITitleDef
     {
