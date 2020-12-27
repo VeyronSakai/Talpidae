@@ -1,7 +1,7 @@
-﻿using OutGame;
-using OutGame.Common;
+﻿using OutGame.Common;
 using OutGame.Common.Cameras;
 using OutGame.Common.Canvases;
+using OutGame.Title;
 
 namespace Main
 {
@@ -20,7 +20,7 @@ namespace Main
 
         protected override void OnAwake()
         {
-            _hierarchyBuilder.BuildHierarchy();
+            _hierarchyBuilder.BuildHierarchy<TitleCamera>(UITitleCommonDef.TitleCameraPrefabPath);
         }
 
         protected override void OnStart()

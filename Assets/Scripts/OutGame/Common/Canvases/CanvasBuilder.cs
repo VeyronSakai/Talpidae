@@ -1,4 +1,5 @@
 ﻿using OutGame.Common.Cameras;
+using OutGame.Title;
 using PrefabGenerator;
 using UI.Title;
 using UI.Title.Def;
@@ -15,11 +16,12 @@ namespace OutGame.Common.Canvases
             _parentTransform = parentTransform;
         }
 
-        public void BuildCanvas(ICamera titleCamera)
+        public void BuildCanvas(ICamera renderCamera)
         {
             var canvasRoot = EmptyObjectFactory.Create(UITitleCommonDef.CanvasRootName, _parentTransform);
-            var app0Canvas = PrefabFactory.Create<AppCanvas>(UITitleCommonDef.App0CanvasPath, canvasRoot.transform);
-            app0Canvas.SetCamera(titleCamera);
+            var app0Canvas =
+                PrefabFactory.Create<AppCanvas>(UITitleCommonDef.App0CanvasPrefabPath, canvasRoot.transform);
+            app0Canvas.SetCamera(renderCamera);
 
             PrefabFactory.Create<UITitleBackGroundWindow>(UITitleDef.UITitleBackgroundWindowPath, app0Canvas.transform);
         }

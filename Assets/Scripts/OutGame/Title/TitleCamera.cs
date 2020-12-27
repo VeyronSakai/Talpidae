@@ -1,7 +1,7 @@
 ﻿using OutGame.Common.Cameras;
 using UnityEngine;
 
-namespace OutGame
+namespace OutGame.Title
 {
     public class TitleCamera : CameraBase
     {

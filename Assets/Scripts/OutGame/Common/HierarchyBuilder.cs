@@ -14,11 +14,11 @@ namespace OutGame.Common
             _canvasBuilder = canvasBuilder;
         }
 
-        public void BuildHierarchy()
+        public void BuildHierarchy<T>(string cameraPrefabPath) where T : CameraBase
         {
-            var titleCamera = _cameraBuilder.BuildCamera();
+            var camera = _cameraBuilder.BuildCamera<T>(cameraPrefabPath);
 
-            _canvasBuilder.BuildCanvas(titleCamera);
+            _canvasBuilder.BuildCanvas(camera);
         }
     }
 }
