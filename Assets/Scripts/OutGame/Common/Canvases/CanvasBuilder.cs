@@ -1,7 +1,7 @@
 ﻿using OutGame.Common.Cameras;
 using OutGame.Title;
 using PrefabGenerator;
-using UI.Presenter.Title;
+using UI.Page.Title;
 using UnityEngine;
 
 namespace OutGame.Common.Canvases
@@ -9,6 +9,7 @@ namespace OutGame.Common.Canvases
     public sealed class CanvasBuilder
     {
         private readonly Transform _parentTransform;
+        private AppCanvas _app0Canvas;
 
         public CanvasBuilder(Transform parentTransform)
         {
@@ -18,12 +19,11 @@ namespace OutGame.Common.Canvases
         public void BuildCanvas(ICamera renderCamera)
         {
             var canvasRoot = EmptyObjectFactory.Create(UITitleCommonDef.CanvasRootName, _parentTransform);
-            var app0Canvas =
+            _app0Canvas =
                 PrefabFactory.Create<AppCanvas>(UITitleCommonDef.App0CanvasPrefabPath, canvasRoot.transform);
-            app0Canvas.SetCamera(renderCamera);
+            _app0Canvas.SetCamera(renderCamera);
 
-            // TODO: Factory Method に切り出す
-            var presenter = new UITitleBackGroundPresenter(app0Canvas.transform);
+            var topPage = new UITitleTopPage(_app0Canvas.GetTransform());
         }
     }
 }

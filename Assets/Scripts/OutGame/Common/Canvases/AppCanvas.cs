@@ -7,6 +7,7 @@ namespace OutGame.Common.Canvases
     public class AppCanvas : PrefabBase
     {
         private Canvas _rawCanvas;
+        private Transform _canvasTransform;
 
         public Canvas GetRawCanvas()
         {
@@ -26,6 +27,16 @@ namespace OutGame.Common.Canvases
             }
 
             _rawCanvas.worldCamera = targetCamera.GetRawCamera();
+        }
+
+        public Transform GetTransform()
+        {
+            if (_canvasTransform == null)
+            {
+                _canvasTransform = transform;
+            }
+
+            return _canvasTransform;
         }
     }
 }
