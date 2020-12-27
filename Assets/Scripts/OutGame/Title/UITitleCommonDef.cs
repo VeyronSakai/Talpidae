@@ -7,7 +7,7 @@
         public static readonly string CameraRootName = "CameraRoot";
 
         // Prefab Path
-        public static readonly string App0CanvasPrefabPath = "Canvases/App0Canvas";
-        public static readonly string TitleCameraPrefabPath = "Cameras/TitleCamera";
+        public static readonly string App0CanvasPrefabPath = "UI/Prefabs/Canvases/App0Canvas";
+        public static readonly string TitleCameraPrefabPath = "UI/Prefabs/Cameras/TitleCamera";
     }
 }
