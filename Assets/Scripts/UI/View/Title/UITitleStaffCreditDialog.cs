@@ -1,8 +1,8 @@
-﻿using PrefabGenerator;
+﻿using Common.OutGame.View;
 
 namespace UI.View.Title
 {
-    public sealed class UITitleStaffCreditDialog : PrefabBase
+    public sealed class UITitleStaffCreditDialog : ViewBase
     {
     }
 }
