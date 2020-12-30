@@ -1,8 +1,8 @@
-﻿using OutGame.Title;
+﻿using Common.OutGame.Title;
 using PrefabGenerator;
 using UnityEngine;
 
-namespace OutGame.Common.Cameras
+namespace Common.Cameras
 {
     public sealed class CameraBuilder
     {

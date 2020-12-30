@@ -1,7 +1,7 @@
-﻿using OutGame.Common.Cameras;
+﻿using Common.Cameras;
 using UnityEngine;
 
-namespace OutGame.Title
+namespace Common.OutGame.Title
 {
     public class TitleCamera : CameraBase
     {
@@ -9,10 +9,7 @@ namespace OutGame.Title
 
         public override Camera GetRawCamera()
         {
-            if (_titleRawCamera == null)
-            {
-                _titleRawCamera = GetComponent<Camera>();
-            }
+            if (_titleRawCamera == null) _titleRawCamera = GetComponent<Camera>();
 
             return _titleRawCamera;
         }

@@ -1,7 +1,7 @@
-﻿using OutGame.Common.Cameras;
-using OutGame.Common.Canvases;
+﻿using Common.Cameras;
+using Common.OutGame.Canvases;
 
-namespace OutGame.Common
+namespace Common
 {
     public sealed class HierarchyBuilder
     {

@@ -1,25 +1,12 @@
-﻿using System;
-using OutGame.Common.Canvases;
+using Common.OutGame.Presenter;
 using PrefabGenerator;
-using UI.View.Title;
-using UI.View.Title.Def;
 
 namespace UI.Presenter.Title
 {
-    public class UITitleStaffCreditPresenter : IDisposable
+    public class UITitleStaffCreditPresenter<T> : PresenterBase<T> where T : PrefabBase
     {
-        public UITitleStaffCreditDialog StaffCreditDialog;
-
-        public UITitleStaffCreditPresenter(AppCanvas canvas)
+        public UITitleStaffCreditPresenter(PresenterCommonArgs commonArgs) : base(commonArgs)
         {
-            StaffCreditDialog =
-                PrefabFactory.Create<UITitleStaffCreditDialog>(UITitleDef.UITitleStaffCreditDialog,
-                    canvas.GetTransform());
-        }
-
-        public void Dispose()
-        {
-            PrefabDestroyer.Destroy(ref StaffCreditDialog);
         }
     }
 }

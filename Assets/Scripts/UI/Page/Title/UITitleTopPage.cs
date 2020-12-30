@@ -1,5 +1,8 @@
-﻿using OutGame.Common.Canvases;
+﻿using Common.OutGame.Canvases;
+using Common.OutGame.Presenter;
 using UI.Presenter.Title;
+using UI.View.Title;
+using UI.View.Title.Def;
 using UniRx;
 
 namespace UI.Page.Title
@@ -7,7 +10,7 @@ namespace UI.Page.Title
     public sealed class UITitleTopPage
     {
         private readonly UITitleBackGroundPresenter _backGroundPresenter;
-        private UITitleStaffCreditPresenter _staffCreditPresenter;
+        private UITitleStaffCreditPresenter<UITitleStaffCreditDialog> _staffCreditPresenter;
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
@@ -21,7 +24,11 @@ namespace UI.Page.Title
 
         private void Temp(AppCanvasParams canvasParams)
         {
-            _staffCreditPresenter = new UITitleStaffCreditPresenter(canvasParams.App0Canvas);
+            var commonParams =
+                PresenterCommonArgsFactory.Create(canvasParams.App0Canvas, UITitleDef.UITitleStaffCreditDialog);
+
+            _staffCreditPresenter =
+                new UITitleStaffCreditPresenter<UITitleStaffCreditDialog>(commonParams);
         }
     }
 }

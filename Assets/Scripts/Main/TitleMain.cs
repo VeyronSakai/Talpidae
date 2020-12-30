@@ -1,7 +1,7 @@
-﻿using OutGame.Common;
-using OutGame.Common.Cameras;
-using OutGame.Common.Canvases;
-using OutGame.Title;
+﻿using Common;
+using Common.Cameras;
+using Common.OutGame.Canvases;
+using Common.OutGame.Title;
 
 namespace Main
 {

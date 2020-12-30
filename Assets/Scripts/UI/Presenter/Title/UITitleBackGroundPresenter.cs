@@ -1,5 +1,5 @@
 ﻿using System;
-using OutGame.Common.Canvases;
+using Common.OutGame.Canvases;
 using PrefabGenerator;
 using UI.View.Title;
 using UI.View.Title.Def;
@@ -11,15 +11,15 @@ namespace UI.Presenter.Title
     {
         public UITitleBackGroundWindow BackGroundWindow;
 
-        public IObservable<Unit> CreditButtonObservable => BackGroundWindow.CreditButtonObservable;
-        public IObservable<Unit> TapToStartButtonObservable => BackGroundWindow.TapToStartButtonObservable;
-
         public UITitleBackGroundPresenter(AppCanvas canvas)
         {
             BackGroundWindow =
                 PrefabFactory.Create<UITitleBackGroundWindow>(UITitleDef.UITitleBackgroundWindowPath,
                     canvas.GetTransform());
         }
+
+        public IObservable<Unit> CreditButtonObservable => BackGroundWindow.CreditButtonObservable;
+        public IObservable<Unit> TapToStartButtonObservable => BackGroundWindow.TapToStartButtonObservable;
 
         public void Dispose()
         {

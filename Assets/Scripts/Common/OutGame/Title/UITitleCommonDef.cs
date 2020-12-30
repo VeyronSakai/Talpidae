@@ -1,4 +1,4 @@
-﻿namespace OutGame.Title
+﻿namespace Common.OutGame.Title
 {
     public static class UITitleCommonDef
     {
