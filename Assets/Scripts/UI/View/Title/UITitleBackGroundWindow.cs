@@ -9,7 +9,9 @@ namespace UI.View.Title
     public sealed class UITitleBackGroundWindow : PrefabBase
     {
         [SerializeField] private Button tapToStartButton = default;
-        
-        public IObservable<Unit> TapToStartButton => tapToStartButton.OnClickAsObservable();
+        [SerializeField] private Button creditButton = default;
+
+        public IObservable<Unit> TapToStartButtonObservable => tapToStartButton.OnClickAsObservable();
+        public IObservable<Unit> CreditButtonObservable => creditButton.OnClickAsObservable();
     }
 }

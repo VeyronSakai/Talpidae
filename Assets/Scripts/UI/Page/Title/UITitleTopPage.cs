@@ -1,5 +1,5 @@
-﻿using UI.Presenter.Title;
-using UnityEngine;
+﻿using OutGame.Common.Canvases;
+using UI.Presenter.Title;
 
 namespace UI.Page.Title
 {
@@ -7,9 +7,9 @@ namespace UI.Page.Title
     {
         private UITitleBackGroundPresenter _backGroundPresenter;
 
-        public UITitleTopPage(Transform parent)
+        public UITitleTopPage(AppCanvasParams canvasParams)
         {
-            _backGroundPresenter = new UITitleBackGroundPresenter(parent);
+            _backGroundPresenter = new UITitleBackGroundPresenter(canvasParams.App0Canvas);
         }
     }
 }

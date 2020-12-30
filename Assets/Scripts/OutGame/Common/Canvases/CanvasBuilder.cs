@@ -10,6 +10,7 @@ namespace OutGame.Common.Canvases
     {
         private readonly Transform _parentTransform;
         private AppCanvas _app0Canvas;
+        private AppCanvasParams _appCanvasParams;
 
         public CanvasBuilder(Transform parentTransform)
         {
@@ -23,7 +24,9 @@ namespace OutGame.Common.Canvases
                 PrefabFactory.Create<AppCanvas>(UITitleCommonDef.App0CanvasPrefabPath, canvasRoot.transform);
             _app0Canvas.SetCamera(renderCamera);
 
-            var topPage = new UITitleTopPage(_app0Canvas.GetTransform());
+            _appCanvasParams = new AppCanvasParams(_app0Canvas);
+
+            var topPage = new UITitleTopPage(_appCanvasParams);
         }
     }
 }

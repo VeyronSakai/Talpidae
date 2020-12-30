@@ -1,4 +1,5 @@
-﻿using PrefabGenerator;
+﻿using OutGame.Common.Canvases;
+using PrefabGenerator;
 using UI.View.Title;
 using UI.View.Title.Def;
 using UniRx;
@@ -10,11 +11,13 @@ namespace UI.Presenter.Title
     {
         private readonly UITitleBackGroundWindow _backGroundWindow;
 
-        public UITitleBackGroundPresenter(Transform parent)
+        public UITitleBackGroundPresenter(AppCanvas canvas)
         {
             _backGroundWindow =
-                PrefabFactory.Create<UITitleBackGroundWindow>(UITitleDef.UITitleBackgroundWindowPath, parent);
-            _backGroundWindow.TapToStartButton.Subscribe(_ => Debug.Log("test")).AddTo(_backGroundWindow);
+                PrefabFactory.Create<UITitleBackGroundWindow>(UITitleDef.UITitleBackgroundWindowPath, canvas.GetTransform());
+            
+            _backGroundWindow.TapToStartButtonObservable.Subscribe(_ => Debug.Log("test")).AddTo(_backGroundWindow);
+            _backGroundWindow.CreditButtonObservable.Subscribe(_ => Debug.Log("Creditボタン")).AddTo(_backGroundWindow);
         }
     }
 }
