@@ -6,7 +6,7 @@ namespace Common.OutGame.Presenter
 {
     public abstract class PresenterBase<T> : IDisposable where T : ViewBase
     {
-        public ViewBase TargetView;
+        public T TargetView;
 
         protected PresenterBase(PresenterCommonArgs commonArgs)
         {

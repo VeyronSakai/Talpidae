@@ -13,12 +13,15 @@ namespace UI.Page.Title
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
-            _backGroundPresenter = new UITitleBackGroundPresenter(canvasParams.App0Canvas);
+            var backgroundWindowParams = PresenterCommonArgsFactory.Create(canvasParams.App0Canvas,
+                UITitleDef.UITitleBackgroundWindowPath);
+
+            _backGroundPresenter = new UITitleBackGroundPresenter(backgroundWindowParams);
 
             _backGroundPresenter
                 .CreditButtonObservable
                 .Subscribe(_ => ShowStaffCredit(canvasParams))
-                .AddTo(_backGroundPresenter.BackGroundWindow);
+                .AddTo(_backGroundPresenter.TargetView);
         }
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
