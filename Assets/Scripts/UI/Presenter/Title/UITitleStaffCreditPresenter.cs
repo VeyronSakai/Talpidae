@@ -1,9 +1,9 @@
 using Common.OutGame.Presenter;
-using PrefabGenerator;
+using UI.View.Title;
 
 namespace UI.Presenter.Title
 {
-    public class UITitleStaffCreditPresenter<T> : PresenterBase<T> where T : PrefabBase
+    public class UITitleStaffCreditPresenter : PresenterBase<UITitleStaffCreditDialog>
     {
         public UITitleStaffCreditPresenter(PresenterCommonArgs commonArgs) : base(commonArgs)
         {
