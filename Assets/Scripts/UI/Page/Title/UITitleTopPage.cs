@@ -12,7 +12,8 @@ namespace UI.Page.Title
         {
             _backGroundPresenter = new UITitleBackGroundPresenter(canvasParams.App0Canvas);
 
-            _backGroundPresenter.CreditButtonObservable.Subscribe(_ => _backGroundPresenter.Dispose()).AddTo(_backGroundPresenter.BackGroundWindow);
+            _backGroundPresenter.CreditButtonObservable.Subscribe(_ => _backGroundPresenter.Dispose())
+                .AddTo(_backGroundPresenter.BackGroundWindow);
         }
     }
 }
