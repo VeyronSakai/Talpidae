@@ -10,6 +10,7 @@ namespace UI.Page.Title
     {
         private readonly UITitleBackGroundPresenter _backGroundPresenter;
         private UITitleStaffCreditPresenter _staffCreditPresenter;
+        private UITitleTouchBlockPresenter _touchBlockPresenter;
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
@@ -26,8 +27,13 @@ namespace UI.Page.Title
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
+            var blockArgs =
+                PresenterCommonArgsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleTouchBlockWindow);
+
+            _touchBlockPresenter = new UITitleTouchBlockPresenter(blockArgs);
+
             var commonParams =
-                PresenterCommonArgsFactory.Create(canvasParams.App0Canvas, UITitleDef.UITitleStaffCreditDialog);
+                PresenterCommonArgsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleStaffCreditDialog);
 
             _staffCreditPresenter = new UITitleStaffCreditPresenter(commonParams);
         }
