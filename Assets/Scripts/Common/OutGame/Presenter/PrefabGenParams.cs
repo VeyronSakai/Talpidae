@@ -3,7 +3,7 @@
 namespace Common.OutGame.Presenter
 {
     /// <summary>
-    ///     Prefabを生成する際に必要な情報を格納する
+    ///     Prefabを生成する際に必要な情報
     /// </summary>
     public readonly struct PrefabGenParams
     {
