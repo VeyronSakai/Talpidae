@@ -1,5 +1,6 @@
 ﻿using Common;
 using Common.OutGame.Canvases;
+using Common.OutGame.Page;
 using Common.OutGame.Presenter;
 using UI.Presenter.Title;
 using UI.View.Title;
@@ -8,7 +9,7 @@ using UniRx;
 
 namespace UI.Page.Title
 {
-    public sealed class UITitleTopPage
+    public sealed class UITitleTopPage : PageBase
     {
         private readonly UITitleBackGroundPresenter _backGroundPresenter;
         private UITitleStaffCreditPresenter _staffCreditPresenter;
@@ -16,11 +17,9 @@ namespace UI.Page.Title
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
-            var backgroundWindowParams = PrefabGenParamsFactory.Create(canvasParams.App0Canvas,
-                UITitleDef.UITitleBackgroundWindowPath);
-
             _backGroundPresenter =
-                PresenterFactory<UITitleBackGroundPresenter, UITitleBackGroundWindow>.Create(backgroundWindowParams);
+                CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasParams.App0Canvas,
+                    UITitlePrefabPathDef.UITitleBackgroundWindow);
 
             _backGroundPresenter
                 .CreditButtonObservable
@@ -30,17 +29,13 @@ namespace UI.Page.Title
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
-            var blockArgs =
-                PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleTouchBlockWindow);
-
             _touchBlockPresenter =
-                PresenterFactory<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>.Create(blockArgs);
-
-            var staffCreditParams =
-                PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleStaffCreditDialog);
+                CreatePresenter<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>(canvasParams.App0Canvas,
+                    UITitlePrefabPathDef.UITitleTouchBlockWindow);
 
             _staffCreditPresenter =
-                PresenterFactory<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>.Create(staffCreditParams);
+                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
+                    UITitlePrefabPathDef.UITitleStaffCreditDialog);
         }
     }
 }
