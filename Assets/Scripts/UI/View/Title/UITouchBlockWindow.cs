@@ -2,7 +2,7 @@
 
 namespace UI.View.Title
 {
-    public sealed class UITitleTouchBlockWindow : ViewBase
+    public sealed class UITouchBlockWindow : ViewBase
     {
     }
 }

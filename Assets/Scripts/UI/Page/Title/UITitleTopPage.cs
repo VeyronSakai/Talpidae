@@ -10,18 +10,13 @@ namespace UI.Page.Title
     public sealed class UITitleTopPage : PageBase
     {
         private readonly UITitleBackGroundPresenter _backGroundPresenter;
-        private UITitleStaffCreditPresenter _staffCreditPresenter;
-        private UITitleTouchBlockPresenter _touchBlockPresenter;
+        private readonly UITitleStaffCreditPresenter _staffCreditPresenter;
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
             _backGroundPresenter =
                 CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasParams.App0Canvas,
                     UITitlePrefabPathDef.UITitleBackgroundWindow);
-
-            _touchBlockPresenter =
-                CreatePresenter<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>(canvasParams.App0Canvas,
-                    UITitlePrefabPathDef.UITitleTouchBlockWindow);
 
             _staffCreditPresenter =
                 CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
@@ -38,8 +33,7 @@ namespace UI.Page.Title
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
-            _touchBlockPresenter.SetActive(true);
-
+            canvasParams.App1Canvas.SetActiveTouchBlockWindow(true);
             _staffCreditPresenter.SetActive(true);
         }
     }

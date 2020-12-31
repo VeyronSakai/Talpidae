@@ -4,6 +4,5 @@
     {
         public static readonly string UITitleBackgroundWindow = "UI/Prefabs/Title/UITitleBackgroundWindow";
         public static readonly string UITitleStaffCreditDialog = "UI/Prefabs/Title/UITitleStaffCreditDialog";
-        public static readonly string UITitleTouchBlockWindow = "UI/Prefabs/Title/UITitleTouchBlockWindow";
     }
 }

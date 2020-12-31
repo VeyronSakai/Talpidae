@@ -15,7 +15,7 @@ namespace Common.Cameras
 
         public ICamera BuildCamera<T>(string cameraPrefabPath) where T : CameraBase
         {
-            var cameraRoot = EmptyObjectFactory.Create(UITitleCommonDef.CameraRootName, _parentTransform);
+            var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, _parentTransform);
             var titleCamera = PrefabFactory.Create<T>(cameraPrefabPath, cameraRoot.transform);
             return titleCamera;
         }

@@ -18,7 +18,7 @@ namespace Common
         {
             var camera = _cameraBuilder.BuildCamera<T>(cameraPrefabPath);
 
-            _canvasBuilder.BuildCanvas(camera);
+            _canvasBuilder.BuildCanvases(camera);
         }
     }
 }

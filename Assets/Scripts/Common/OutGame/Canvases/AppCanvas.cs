@@ -1,5 +1,6 @@
 ﻿using Common.Cameras;
 using PrefabGenerator;
+using UI.Presenter.Title;
 using UnityEngine;
 
 namespace Common.OutGame.Canvases
@@ -8,6 +9,7 @@ namespace Common.OutGame.Canvases
     {
         private Transform _canvasTransform;
         private Canvas _rawCanvas;
+        private UITouchBlockPresenter _touchBlockPresenter;
 
         public Canvas GetRawCanvas()
         {
@@ -28,6 +30,25 @@ namespace Common.OutGame.Canvases
             if (_canvasTransform == null) _canvasTransform = transform;
 
             return _canvasTransform;
+        }
+
+        public void SetTouchBlockPresenter(UITouchBlockPresenter presenter)
+        {
+            _touchBlockPresenter = presenter;
+        }
+
+        public void SetActiveTouchBlockWindow(bool isActive)
+        {
+            _touchBlockPresenter.SetActive(isActive);
+        }
+
+        private void OnDestroy()
+        {
+            if (_touchBlockPresenter != null)
+            {
+                _touchBlockPresenter.Dispose();
+                _touchBlockPresenter = null;
+            }
         }
     }
 }
