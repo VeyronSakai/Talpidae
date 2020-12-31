@@ -33,8 +33,8 @@ namespace UI.Page.Title
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
-            canvasParams.App1Canvas.SetActiveTouchBlockWindow(true);
             _staffCreditPresenter.SetActive(true);
+            _staffCreditPresenter.SetActiveTouchBlock(true);
         }
     }
 }

@@ -42,6 +42,11 @@ namespace Common.OutGame.Canvases
             _touchBlockPresenter.SetActive(isActive);
         }
 
+        public bool IsTouchBlockEnabled()
+        {
+            return _touchBlockPresenter.IsViewActive();
+        }
+
         private void OnDestroy()
         {
             if (_touchBlockPresenter != null)
