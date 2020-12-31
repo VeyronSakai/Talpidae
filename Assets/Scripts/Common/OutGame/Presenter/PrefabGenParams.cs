@@ -3,14 +3,14 @@
 namespace Common.OutGame.Presenter
 {
     /// <summary>
-    ///     Presenterを生成する時にコンストラクタに毎回渡すパラメータ
+    ///     Prefabを生成する際に必要な情報を格納する
     /// </summary>
-    public readonly struct PresenterCommonArgs
+    public readonly struct PrefabGenParams
     {
         public readonly AppCanvas AppCanvas;
         public readonly string PrefabPath;
 
-        public PresenterCommonArgs(AppCanvas canvas, string prefabPath)
+        public PrefabGenParams(AppCanvas canvas, string prefabPath)
         {
             AppCanvas = canvas;
             PrefabPath = prefabPath;

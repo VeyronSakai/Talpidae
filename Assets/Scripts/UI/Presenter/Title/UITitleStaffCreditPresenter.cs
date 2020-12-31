@@ -5,7 +5,7 @@ namespace UI.Presenter.Title
 {
     public class UITitleStaffCreditPresenter : PresenterBase<UITitleStaffCreditDialog>
     {
-        public UITitleStaffCreditPresenter(PresenterCommonArgs commonArgs) : base(commonArgs)
+        public UITitleStaffCreditPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
         {
         }
     }

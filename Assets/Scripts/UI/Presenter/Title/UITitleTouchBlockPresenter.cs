@@ -5,7 +5,7 @@ namespace UI.Presenter.Title
 {
     public sealed class UITitleTouchBlockPresenter : PresenterBase<UITitleTouchBlockWindow>
     {
-        public UITitleTouchBlockPresenter(PresenterCommonArgs commonArgs) : base(commonArgs)
+        public UITitleTouchBlockPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
         {
         }
     }

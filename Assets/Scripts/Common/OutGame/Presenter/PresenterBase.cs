@@ -8,9 +8,9 @@ namespace Common.OutGame.Presenter
     {
         public T TargetView;
 
-        protected PresenterBase(PresenterCommonArgs commonArgs)
+        protected PresenterBase(PrefabGenParams prefabGenParams)
         {
-            TargetView = PrefabFactory.Create<T>(commonArgs.PrefabPath, commonArgs.AppCanvas.GetTransform());
+            TargetView = PrefabFactory.Create<T>(prefabGenParams.PrefabPath, prefabGenParams.AppCanvas.GetTransform());
         }
 
         public virtual void Dispose()

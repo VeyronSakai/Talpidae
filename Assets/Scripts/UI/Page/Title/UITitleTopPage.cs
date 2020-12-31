@@ -14,7 +14,7 @@ namespace UI.Page.Title
 
         public UITitleTopPage(AppCanvasParams canvasParams)
         {
-            var backgroundWindowParams = PresenterCommonArgsFactory.Create(canvasParams.App0Canvas,
+            var backgroundWindowParams = PrefabGenParamsFactory.Create(canvasParams.App0Canvas,
                 UITitleDef.UITitleBackgroundWindowPath);
 
             _backGroundPresenter = new UITitleBackGroundPresenter(backgroundWindowParams);
@@ -28,12 +28,12 @@ namespace UI.Page.Title
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
             var blockArgs =
-                PresenterCommonArgsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleTouchBlockWindow);
+                PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleTouchBlockWindow);
 
             _touchBlockPresenter = new UITitleTouchBlockPresenter(blockArgs);
 
             var commonParams =
-                PresenterCommonArgsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleStaffCreditDialog);
+                PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleStaffCreditDialog);
 
             _staffCreditPresenter = new UITitleStaffCreditPresenter(commonParams);
         }

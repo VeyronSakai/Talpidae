@@ -7,7 +7,7 @@ namespace UI.Presenter.Title
 {
     public sealed class UITitleBackGroundPresenter : PresenterBase<UITitleBackGroundWindow>
     {
-        public UITitleBackGroundPresenter(PresenterCommonArgs commonArgs) : base(commonArgs)
+        public UITitleBackGroundPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
         {
         }
 
