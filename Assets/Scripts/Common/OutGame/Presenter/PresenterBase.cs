@@ -11,6 +11,13 @@ namespace Common.OutGame.Presenter
         protected PresenterBase(PrefabGenParams prefabGenParams)
         {
             TargetView = PrefabFactory.Create<T>(prefabGenParams.PrefabPath, prefabGenParams.AppCanvas.GetTransform());
+
+            TargetView.gameObject.SetActive(false);
+        }
+
+        public void SetActive(bool isActive)
+        {
+            TargetView.gameObject.SetActive(isActive);
         }
 
         public virtual void Dispose()

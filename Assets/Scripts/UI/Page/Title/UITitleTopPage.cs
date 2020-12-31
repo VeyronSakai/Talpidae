@@ -1,7 +1,5 @@
-﻿using Common;
-using Common.OutGame.Canvases;
+﻿using Common.OutGame.Canvases;
 using Common.OutGame.Page;
-using Common.OutGame.Presenter;
 using UI.Presenter.Title;
 using UI.View.Title;
 using UI.View.Title.Def;
@@ -21,6 +19,17 @@ namespace UI.Page.Title
                 CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasParams.App0Canvas,
                     UITitlePrefabPathDef.UITitleBackgroundWindow);
 
+            _touchBlockPresenter =
+                CreatePresenter<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>(canvasParams.App0Canvas,
+                    UITitlePrefabPathDef.UITitleTouchBlockWindow);
+
+            _staffCreditPresenter =
+                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
+                    UITitlePrefabPathDef.UITitleStaffCreditDialog);
+
+            _backGroundPresenter.SetActive(true);
+
+            // イベントの購読
             _backGroundPresenter
                 .CreditButtonObservable
                 .Subscribe(_ => ShowStaffCredit(canvasParams))
@@ -29,13 +38,9 @@ namespace UI.Page.Title
 
         private void ShowStaffCredit(AppCanvasParams canvasParams)
         {
-            _touchBlockPresenter =
-                CreatePresenter<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>(canvasParams.App0Canvas,
-                    UITitlePrefabPathDef.UITitleTouchBlockWindow);
+            _touchBlockPresenter.SetActive(true);
 
-            _staffCreditPresenter =
-                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
-                    UITitlePrefabPathDef.UITitleStaffCreditDialog);
+            _staffCreditPresenter.SetActive(true);
         }
     }
 }
