@@ -1,6 +1,8 @@
-﻿using Common.OutGame.Canvases;
+﻿using Common;
+using Common.OutGame.Canvases;
 using Common.OutGame.Presenter;
 using UI.Presenter.Title;
+using UI.View.Title;
 using UI.View.Title.Def;
 using UniRx;
 
@@ -17,7 +19,8 @@ namespace UI.Page.Title
             var backgroundWindowParams = PrefabGenParamsFactory.Create(canvasParams.App0Canvas,
                 UITitleDef.UITitleBackgroundWindowPath);
 
-            _backGroundPresenter = new UITitleBackGroundPresenter(backgroundWindowParams);
+            _backGroundPresenter =
+                PresenterFactory<UITitleBackGroundPresenter, UITitleBackGroundWindow>.Create(backgroundWindowParams);
 
             _backGroundPresenter
                 .CreditButtonObservable
@@ -30,12 +33,14 @@ namespace UI.Page.Title
             var blockArgs =
                 PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleTouchBlockWindow);
 
-            _touchBlockPresenter = new UITitleTouchBlockPresenter(blockArgs);
+            _touchBlockPresenter =
+                PresenterFactory<UITitleTouchBlockPresenter, UITitleTouchBlockWindow>.Create(blockArgs);
 
-            var commonParams =
+            var staffCreditParams =
                 PrefabGenParamsFactory.Create(canvasParams.App1Canvas, UITitleDef.UITitleStaffCreditDialog);
 
-            _staffCreditPresenter = new UITitleStaffCreditPresenter(commonParams);
+            _staffCreditPresenter =
+                PresenterFactory<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>.Create(staffCreditParams);
         }
     }
 }
