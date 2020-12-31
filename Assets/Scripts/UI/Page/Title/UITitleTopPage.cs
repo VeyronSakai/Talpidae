@@ -27,14 +27,13 @@ namespace UI.Page.Title
             // イベントの購読
             _backGroundPresenter
                 .CreditButtonObservable
-                .Subscribe(_ => ShowStaffCredit(canvasParams))
+                .Subscribe(_ => _staffCreditPresenter.Open())
                 .AddTo(_backGroundPresenter.TargetView);
-        }
 
-        private void ShowStaffCredit(AppCanvasParams canvasParams)
-        {
-            _staffCreditPresenter.SetActive(true);
-            _staffCreditPresenter.SetActiveTouchBlock(true);
+            _staffCreditPresenter
+                .ReturnButtonAsObservable
+                .Subscribe(_ => _staffCreditPresenter.Close())
+                .AddTo(_staffCreditPresenter.TargetView);
         }
     }
 }
