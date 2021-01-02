@@ -27,12 +27,12 @@ namespace UI.Page.Title
             // イベントの購読
             _backGroundPresenter
                 .CreditButtonObservable
-                .Subscribe(_ => _staffCreditPresenter.Open())
+                .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
                 .AddTo(_backGroundPresenter.TargetView);
 
             _staffCreditPresenter
                 .ReturnButtonAsObservable
-                .Subscribe(_ => _staffCreditPresenter.Close())
+                .Subscribe(async _ => await _staffCreditPresenter.HideAsync())
                 .AddTo(_staffCreditPresenter.TargetView);
         }
     }
