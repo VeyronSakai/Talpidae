@@ -21,8 +21,8 @@ namespace UI.Page.Title
             _staffCreditPresenter =
                 CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
                     UITitlePrefabPathDef.UITitleStaffCreditDialog);
-
-            _backGroundPresenter.SetActive(true);
+            
+            _backGroundPresenter.SetActiveView(true);
 
             // イベントの購読
             _backGroundPresenter

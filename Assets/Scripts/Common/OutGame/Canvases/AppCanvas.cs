@@ -39,7 +39,7 @@ namespace Common.OutGame.Canvases
 
         public void SetActiveTouchBlockWindow(bool isActive)
         {
-            _touchBlockPresenter.SetActive(isActive);
+            _touchBlockPresenter.SetActiveView(isActive);
         }
 
         public bool IsTouchBlockEnabled()

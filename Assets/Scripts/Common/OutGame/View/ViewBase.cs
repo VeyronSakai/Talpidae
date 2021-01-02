@@ -15,29 +15,29 @@ namespace Common.OutGame.View
 
         public void PlayOpenAnimation()
         {
-            GetAnimation();
+            SetAnimation();
             AnimationPlayer.Play(_animation, openClip);
         }
 
         public void PlayCloseAnimation()
         {
-            GetAnimation();
+            SetAnimation();
             AnimationPlayer.Play(_animation, closeClip);
         }
 
         public async UniTask PlayOpenAnimationAsync()
         {
-            GetAnimation();
+            SetAnimation();
             await AnimationPlayer.PlayAsync(_animation, openClip);
         }
         
         public async UniTask PlayCloseAnimationAsync()
         {
-            GetAnimation();
+            SetAnimation();
             await AnimationPlayer.PlayAsync(_animation, closeClip);
         }
         
-        private void GetAnimation()
+        private void SetAnimation()
         {
             if (_animation == null)
             {

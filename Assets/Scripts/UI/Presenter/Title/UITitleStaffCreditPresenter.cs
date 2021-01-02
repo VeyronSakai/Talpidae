@@ -16,16 +16,12 @@ namespace UI.Presenter.Title
 
         public async UniTask ShowAsync()
         {
-            SetActiveTouchBlock(true);
-            SetActive(true);
-            await TargetView.PlayOpenAnimationAsync();
+            await ShowDialogCommonAsync();
         }
-
+        
         public async UniTask HideAsync()
         {
-            SetActiveTouchBlock(false);
-            await TargetView.PlayCloseAnimationAsync();
-            SetActive(false);
+            await HideDialogCommonAsync();
         }
     }
 }

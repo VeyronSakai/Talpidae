@@ -1,6 +1,7 @@
 ﻿using System;
 using Common.OutGame.Canvases;
 using Common.OutGame.View;
+using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 
 namespace Common.OutGame.Presenter
@@ -14,26 +15,45 @@ namespace Common.OutGame.Presenter
         {
             TargetView = PrefabFactory.Create<T>(prefabGenParams.PrefabPath, prefabGenParams.AppCanvas.GetTransform());
             _appCanvas = prefabGenParams.AppCanvas;
-
-            TargetView.gameObject.SetActive(false);
+            SetActiveView(false);
         }
 
-        public void SetActive(bool isActive)
+        /// <summary>
+        /// Dialogを開く際の共通処理
+        /// </summary>
+        protected async UniTask ShowDialogCommonAsync()
+        {
+            SetActiveTouchBlock(true);
+            SetActiveView(true);
+            await TargetView.PlayOpenAnimationAsync();
+        }
+
+        /// <summary>
+        /// Dialogを閉じる際の共通処理
+        /// </summary>
+        protected async UniTask HideDialogCommonAsync()
+        {
+            SetActiveTouchBlock(false);
+            await TargetView.PlayCloseAnimationAsync();
+            SetActiveView(false);
+        }
+
+        public void SetActiveView(bool isActive)
         {
             TargetView.gameObject.SetActive(isActive);
-        }
-
-        public void SetActiveTouchBlock(bool isActive)
-        {
-            if (_appCanvas.IsTouchBlockEnabled() != isActive)
-            {
-                _appCanvas.SetActiveTouchBlockWindow(isActive);
-            }
         }
 
         public bool IsViewActive()
         {
             return TargetView.gameObject.activeInHierarchy;
+        }
+
+        private void SetActiveTouchBlock(bool isActive)
+        {
+            if (_appCanvas.IsTouchBlockEnabled() != isActive)
+            {
+                _appCanvas.SetActiveTouchBlockWindow(isActive);
+            }
         }
 
         public virtual void Dispose()
