@@ -12,7 +12,7 @@ namespace Common.OutGame.Presenter
 
         public static TPresenter Create(PrefabGenParams genParams)
         {
-            if (_delegateCache == null) _delegateCache = CreateInstanceDelegate<TPresenter>();
+            _delegateCache ??= CreateInstanceDelegate<TPresenter>();
 
             return _delegateCache(genParams);
         }
