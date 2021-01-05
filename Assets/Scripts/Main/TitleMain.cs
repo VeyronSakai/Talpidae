@@ -14,8 +14,8 @@ namespace Main
             var titleMainTransform = transform;
 
             var titleCameraBuilder = new CameraBuilder(titleMainTransform);
-            var canvasBuilder = new CanvasBuilder(titleMainTransform);
-            _hierarchyBuilder = new HierarchyBuilder(titleCameraBuilder, canvasBuilder);
+            var canvasesBuilder = new CanvasesBuilder(titleMainTransform);
+            _hierarchyBuilder = new HierarchyBuilder(titleCameraBuilder, canvasesBuilder);
         }
 
         protected override void OnAwake()

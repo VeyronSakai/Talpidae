@@ -9,14 +9,14 @@ using UnityEngine;
 
 namespace Common.OutGame.Canvases
 {
-    public sealed class CanvasBuilder
+    public sealed class CanvasesBuilder
     {
         private readonly Transform _parentTransform;
         private AppCanvas _app0Canvas;
         private AppCanvas _app1Canvas;
         private AppCanvasParams _appCanvasParams;
 
-        public CanvasBuilder(Transform parentTransform)
+        public CanvasesBuilder(Transform parentTransform)
         {
             _parentTransform = parentTransform;
         }
