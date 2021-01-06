@@ -4,7 +4,6 @@ using Cysharp.Threading.Tasks;
 using UI.Def;
 using UI.Presenter.Title;
 using UI.View.Title;
-using UI.View.Title.Def;
 using UniRx;
 using UnityEngine.SceneManagement;
 

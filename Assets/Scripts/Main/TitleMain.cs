@@ -1,4 +1,5 @@
-﻿using Common.Camera;
+﻿using Common;
+using Common.Camera;
 using Common.OutGame.Canvas;
 using Common.OutGame.Def;
 using UI.Page.Title;

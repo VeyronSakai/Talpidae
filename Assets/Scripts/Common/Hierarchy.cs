@@ -1,14 +1,17 @@
 using Common.Camera;
 using Common.OutGame.Canvas;
 
-public class Hierarchy
+namespace Common
 {
-    public AppCanvasContainer AppCanvasContainer;
-    public ICamera Camera;
-
-    public Hierarchy(AppCanvasContainer canvasContainer, ICamera camera)
+    public class Hierarchy
     {
-        AppCanvasContainer = canvasContainer;
-        Camera = camera;
+        public AppCanvasContainer AppCanvasContainer;
+        public ICamera Camera;
+
+        public Hierarchy(AppCanvasContainer canvasContainer, ICamera camera)
+        {
+            AppCanvasContainer = canvasContainer;
+            Camera = camera;
+        }
     }
 }

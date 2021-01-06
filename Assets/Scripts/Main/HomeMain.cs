@@ -1,6 +1,8 @@
+using Common;
 using Common.Camera;
 using Common.OutGame.Canvas;
 using Common.OutGame.Def;
+using UI.Page.Home;
 
 namespace Main
 {
@@ -25,6 +27,7 @@ namespace Main
 
         protected override void OnStart()
         {
+            new UIHomeTopPage(_hierarchy.AppCanvasContainer);
         }
 
         protected override void OnUpdate()
