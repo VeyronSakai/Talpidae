@@ -1,17 +1,18 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Animation;
+using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 using UnityEngine;
 
-namespace Common.OutGame.View
+namespace Common.OutGame.Presentation.View
 {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(Animation))]
+    [RequireComponent(typeof(UnityEngine.Animation))]
     public abstract class ViewBase : PrefabBase
     {
         [SerializeField] private AnimationClip openClip = default;
         [SerializeField] private AnimationClip closeClip = default;
 
-        private Animation _animation;
+        private UnityEngine.Animation _animation;
 
         public void PlayOpenAnimation()
         {
@@ -41,7 +42,7 @@ namespace Common.OutGame.View
         {
             if (_animation == null)
             {
-                _animation = GetComponent<Animation>();
+                _animation = GetComponent<UnityEngine.Animation>();
             }
         }
     }

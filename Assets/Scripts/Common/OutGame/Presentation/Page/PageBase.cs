@@ -1,8 +1,8 @@
-﻿using Common.OutGame.Canvases;
-using Common.OutGame.Presenter;
-using Common.OutGame.View;
+﻿using Common.OutGame.Canvas;
+using Common.OutGame.Presentation.Presenter;
+using Common.OutGame.Presentation.View;
 
-namespace Common.OutGame.Page
+namespace Common.OutGame.Presentation.Page
 {
     public abstract class PageBase
     {

@@ -1,26 +1,26 @@
-﻿using Common.Cameras;
+﻿using Common.Camera;
 using PrefabGenerator;
 using UI.Presenter.Title;
 using UnityEngine;
 
-namespace Common.OutGame.Canvases
+namespace Common.OutGame.Canvas
 {
     public class AppCanvas : PrefabBase
     {
         private Transform _canvasTransform;
-        private Canvas _rawCanvas;
+        private UnityEngine.Canvas _rawCanvas;
         private UITouchBlockPresenter _touchBlockPresenter;
 
-        public Canvas GetRawCanvas()
+        public UnityEngine.Canvas GetRawCanvas()
         {
-            if (_rawCanvas == null) _rawCanvas = GetComponent<Canvas>();
+            if (_rawCanvas == null) _rawCanvas = GetComponent<UnityEngine.Canvas>();
 
             return _rawCanvas;
         }
 
         public void SetCamera(ICamera targetCamera)
         {
-            if (_rawCanvas == null) _rawCanvas = GetComponent<Canvas>();
+            if (_rawCanvas == null) _rawCanvas = GetComponent<UnityEngine.Canvas>();
 
             _rawCanvas.worldCamera = targetCamera.GetRawCamera();
         }

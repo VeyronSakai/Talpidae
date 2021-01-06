@@ -1,4 +1,4 @@
-﻿namespace Common.OutGame.Canvases
+﻿namespace Common.OutGame.Canvas
 {
     public readonly struct AppCanvasParams
     {

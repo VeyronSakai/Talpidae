@@ -1,6 +1,6 @@
 ﻿using System;
-using Common;
-using Common.OutGame.View;
+using Common.OutGame.Event;
+using Common.OutGame.Presentation.View;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +12,7 @@ namespace UI.View.Title
         [SerializeField] private PointerEventHandler pointerEventHandler;
         [SerializeField] private Button creditButton;
 
-        public IObservable<Unit> CreditButtonObservable => creditButton.OnClickAsObservable();
-        public IObservable<Unit> PointerDownObservable => pointerEventHandler.PointerDownSubject;
+        public IObservable<Unit> CreditButtonOnClickAsObservable => creditButton.OnClickAsObservable();
+        public IObservable<Unit> PointerDownAsObservable => pointerEventHandler.PointerDownSubject;
     }
 }

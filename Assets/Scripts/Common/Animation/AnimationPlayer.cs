@@ -3,11 +3,11 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Common
+namespace Common.Animation
 {
     public static class AnimationPlayer
     {
-        public static void Play(Animation animation, AnimationClip clip)
+        public static void Play(UnityEngine.Animation animation, AnimationClip clip)
         {
             ThrowIfAnimationIsNull(animation);
 
@@ -19,7 +19,7 @@ namespace Common
             animation.Play(clip.name);
         }
 
-        public static async UniTask PlayAsync(Animation animation, AnimationClip clip,
+        public static async UniTask PlayAsync(UnityEngine.Animation animation, AnimationClip clip,
             CancellationToken cancellationToken = default)
         {
             ThrowIfAnimationIsNull(animation);
@@ -34,7 +34,7 @@ namespace Common
             await UniTask.WaitWhile(() => animation.IsPlaying(clip.name), PlayerLoopTiming.Update, cancellationToken);
         }
 
-        private static void ThrowIfAnimationIsNull(Animation animation)
+        private static void ThrowIfAnimationIsNull(UnityEngine.Animation animation)
         {
             if (animation == null)
             {

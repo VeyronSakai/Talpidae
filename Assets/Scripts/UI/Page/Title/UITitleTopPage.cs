@@ -1,5 +1,5 @@
-﻿using Common.OutGame.Canvases;
-using Common.OutGame.Page;
+﻿using Common.OutGame.Canvas;
+using Common.OutGame.Presentation.Page;
 using UI.Presenter.Title;
 using UI.View.Title;
 using UI.View.Title.Def;
@@ -26,7 +26,7 @@ namespace UI.Page.Title
 
             // イベントの購読
             _backGroundPresenter
-                .CreditButtonDownAsObservable
+                .CreditButtonOnClickAsObservable
                 .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
                 .AddTo(_backGroundPresenter.TargetView);
 

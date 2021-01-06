@@ -1,5 +1,5 @@
 ﻿using System;
-using Common.OutGame.Presenter;
+using Common.OutGame.Presentation.Presenter;
 using UI.View.Title;
 using UniRx;
 
@@ -11,7 +11,7 @@ namespace UI.Presenter.Title
         {
         }
 
-        public IObservable<Unit> CreditButtonDownAsObservable => TargetView.CreditButtonObservable;
-        public IObservable<Unit> PointerDownAsObservable => TargetView.PointerDownObservable;
+        public IObservable<Unit> CreditButtonOnClickAsObservable => TargetView.CreditButtonOnClickAsObservable;
+        public IObservable<Unit> PointerDownAsObservable => TargetView.PointerDownAsObservable;
     }
 }

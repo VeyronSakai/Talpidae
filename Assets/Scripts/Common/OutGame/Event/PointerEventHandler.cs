@@ -2,7 +2,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Common
+namespace Common.OutGame.Event
 {
     [DisallowMultipleComponent]
     public class PointerEventHandler : MonoBehaviour, IPointerDownHandler

@@ -1,5 +1,5 @@
 ﻿using System;
-using Common.OutGame.View;
+using Common.OutGame.Presentation.View;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +9,6 @@ namespace UI.View.Title
     public sealed class UITitleStaffCreditDialog : ViewBase
     {
         [SerializeField] private Button returnButton = default;
-        public IObservable<Unit> ReturnButtonAsObservable => returnButton.OnClickAsObservable();
+        public IObservable<Unit> ReturnButtonOnClickAsObservable => returnButton.OnClickAsObservable();
     }
 }

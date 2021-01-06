@@ -1,6 +1,6 @@
-﻿using Common.OutGame.Canvases;
+﻿using Common.OutGame.Canvas;
 
-namespace Common.OutGame.Presenter
+namespace Common.OutGame.Presentation.Presenter
 {
     public static class PrefabGenParamsFactory
     {

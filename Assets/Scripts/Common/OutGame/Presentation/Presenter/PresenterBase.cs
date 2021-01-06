@@ -1,10 +1,10 @@
 ﻿using System;
-using Common.OutGame.Canvases;
-using Common.OutGame.View;
+using Common.OutGame.Canvas;
+using Common.OutGame.Presentation.View;
 using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 
-namespace Common.OutGame.Presenter
+namespace Common.OutGame.Presentation.Presenter
 {
     public abstract class PresenterBase<T> : IDisposable where T : ViewBase
     {

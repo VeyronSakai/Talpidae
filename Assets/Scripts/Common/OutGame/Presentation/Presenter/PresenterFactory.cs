@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Common.OutGame.View;
+using Common.OutGame.Presentation.View;
 
-namespace Common.OutGame.Presenter
+namespace Common.OutGame.Presentation.Presenter
 {
     public static class PresenterFactory<TPresenter, TView>
         where TPresenter : PresenterBase<TView> where TView : ViewBase

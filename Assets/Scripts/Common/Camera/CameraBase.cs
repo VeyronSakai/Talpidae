@@ -1,10 +1,9 @@
 ﻿using PrefabGenerator;
-using UnityEngine;
 
-namespace Common.Cameras
+namespace Common.Camera
 {
     public abstract class CameraBase : PrefabBase, ICamera
     {
-        public abstract Camera GetRawCamera();
+        public abstract UnityEngine.Camera GetRawCamera();
     }
 }
