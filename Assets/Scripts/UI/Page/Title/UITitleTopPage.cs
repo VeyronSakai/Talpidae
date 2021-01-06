@@ -15,14 +15,14 @@ namespace UI.Page.Title
         private readonly UITitleBackGroundPresenter _backGroundPresenter;
         private readonly UITitleStaffCreditPresenter _staffCreditPresenter;
 
-        public UITitleTopPage(AppCanvasParams canvasParams)
+        public UITitleTopPage(AppCanvasContainer canvasContainer)
         {
             _backGroundPresenter =
-                CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasParams.App0Canvas,
+                CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasContainer.App0Canvas,
                     UITitlePrefabPathDef.UITitleBackgroundWindow);
 
             _staffCreditPresenter =
-                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
+                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasContainer.App1Canvas,
                     UITitlePrefabPathDef.UITitleStaffCreditDialog);
 
             _backGroundPresenter.SetActiveView(true);

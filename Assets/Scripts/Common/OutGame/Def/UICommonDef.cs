@@ -3,13 +3,14 @@
     public static class UICommonDef
     {
         // EmptyObject Name
-        public static readonly string CanvasRootName = "CanvasRoot";
-        public static readonly string CameraRootName = "CameraRoot";
+        public const string CanvasRootName = "CanvasRoot";
+        public const string CameraRootName = "CameraRoot";
 
         // Prefab Path
-        public static readonly string App0CanvasPrefabPath = "UI/Prefabs/Canvases/App0Canvas";
-        public static readonly string App1CanvasPrefabPath = "UI/Prefabs/Canvases/App1Canvas";
-        public static readonly string TitleCameraPrefabPath = "UI/Prefabs/Cameras/TitleCamera";
-        public static readonly string UITouchBlockWindow = "UI/Prefabs/Common/UITouchBlockWindow";
+        public const string App0CanvasPrefabPath = "UI/Prefabs/Canvases/App0Canvas";
+        public const string App1CanvasPrefabPath = "UI/Prefabs/Canvases/App1Canvas";
+        public const string TitleCameraPrefabPath = "UI/Prefabs/Cameras/TitleCamera";
+        public const string HomeCameraPrefabPath = "UI/Prefabs/Cameras/HomeCamera";
+        public const string UITouchBlockWindow = "UI/Prefabs/Common/UITouchBlockWindow";
     }
 }

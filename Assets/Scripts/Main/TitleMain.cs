@@ -1,12 +1,14 @@
 ﻿using Common.Camera;
 using Common.OutGame.Canvas;
 using Common.OutGame.Def;
+using UI.Page.Title;
 
 namespace Main
 {
     public sealed class TitleMain : MainBase
     {
         private HierarchyBuilder _hierarchyBuilder;
+        private Hierarchy _hierarchy;
 
         protected override void Inject()
         {
@@ -19,11 +21,12 @@ namespace Main
 
         protected override void OnAwake()
         {
-            _hierarchyBuilder.BuildHierarchy<TitleCamera>(UICommonDef.TitleCameraPrefabPath);
+            _hierarchy = _hierarchyBuilder.BuildHierarchy<TitleCamera>(UICommonDef.TitleCameraPrefabPath);
         }
 
         protected override void OnStart()
         {
+            new UITitleTopPage(_hierarchy.AppCanvasContainer);
         }
 
         protected override void OnUpdate()

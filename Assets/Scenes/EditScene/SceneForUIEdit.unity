@@ -123,18 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &536327372996627379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6547185348420389142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fe7d8b31adc47bbae505905099b46a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2022301518764676260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -166,7 +154,6 @@ GameObject:
   - component: {fileID: 2022301518764676265}
   - component: {fileID: 2022301518764676266}
   - component: {fileID: 2022301518764676267}
-  - component: {fileID: 2022301518764676264}
   m_Layer: 0
   m_Name: CanvasForUIEdit
   m_TagString: Untagged
@@ -174,18 +161,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2022301518764676264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022301518764676261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236fc238f4911413bad96c5e13d05d7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &2022301518764676265
 Canvas:
   m_ObjectHideFlags: 0
@@ -323,7 +298,6 @@ GameObject:
   - component: {fileID: 6547185348420389139}
   - component: {fileID: 6547185348420389140}
   - component: {fileID: 6547185348420389141}
-  - component: {fileID: 536327372996627379}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera

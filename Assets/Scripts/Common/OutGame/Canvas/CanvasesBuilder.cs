@@ -2,7 +2,6 @@
 using Common.OutGame.Def;
 using Common.OutGame.Presentation.Presenter;
 using PrefabGenerator;
-using UI.Page.Title;
 using UI.Presenter.Title;
 using UI.View.Title;
 using UnityEngine;
@@ -14,14 +13,14 @@ namespace Common.OutGame.Canvas
         private readonly Transform _parentTransform;
         private AppCanvas _app0Canvas;
         private AppCanvas _app1Canvas;
-        private AppCanvasParams _appCanvasParams;
+        private AppCanvasContainer _appCanvasContainer;
 
         public CanvasesBuilder(Transform parentTransform)
         {
             _parentTransform = parentTransform;
         }
 
-        public void BuildCanvases(ICamera renderCamera)
+        public AppCanvasContainer BuildCanvases(ICamera renderCamera)
         {
             var canvasRoot = EmptyObjectFactory.Create(UICommonDef.CanvasRootName, _parentTransform);
             var rootTransform = canvasRoot.transform;
@@ -30,9 +29,9 @@ namespace Common.OutGame.Canvas
 
             _app1Canvas = CreateCanvas(renderCamera, rootTransform, UICommonDef.App1CanvasPrefabPath);
 
-            _appCanvasParams = new AppCanvasParams(_app0Canvas, _app1Canvas);
+            _appCanvasContainer = new AppCanvasContainer(_app0Canvas, _app1Canvas);
 
-            var topPage = new UITitleTopPage(_appCanvasParams);
+            return _appCanvasContainer;
         }
 
         private static AppCanvas CreateCanvas(ICamera renderCamera, Transform rootTransform, string canvasPrefabPath)
