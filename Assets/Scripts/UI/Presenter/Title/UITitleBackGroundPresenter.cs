@@ -11,7 +11,7 @@ namespace UI.Presenter.Title
         {
         }
 
-        public IObservable<Unit> CreditButtonObservable => TargetView.CreditButtonObservable;
-        public IObservable<Unit> TapToStartButtonObservable => TargetView.TapToStartButtonObservable;
+        public IObservable<Unit> CreditButtonDownAsObservable => TargetView.CreditButtonObservable;
+        public IObservable<Unit> PointerDownAsObservable => TargetView.PointerDownObservable;
     }
 }

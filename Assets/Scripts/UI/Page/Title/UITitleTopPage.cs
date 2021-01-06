@@ -21,12 +21,12 @@ namespace UI.Page.Title
             _staffCreditPresenter =
                 CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasParams.App1Canvas,
                     UITitlePrefabPathDef.UITitleStaffCreditDialog);
-            
+
             _backGroundPresenter.SetActiveView(true);
 
             // イベントの購読
             _backGroundPresenter
-                .CreditButtonObservable
+                .CreditButtonDownAsObservable
                 .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
                 .AddTo(_backGroundPresenter.TargetView);
 
