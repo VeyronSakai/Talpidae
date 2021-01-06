@@ -1,9 +1,12 @@
 ﻿using Common.OutGame.Canvas;
 using Common.OutGame.Presentation.Page;
+using Cysharp.Threading.Tasks;
+using UI.Def;
 using UI.Presenter.Title;
 using UI.View.Title;
 using UI.View.Title.Def;
 using UniRx;
+using UnityEngine.SceneManagement;
 
 namespace UI.Page.Title
 {
@@ -28,6 +31,11 @@ namespace UI.Page.Title
             _backGroundPresenter
                 .CreditButtonOnClickAsObservable
                 .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
+                .AddTo(_backGroundPresenter.TargetView);
+
+            _backGroundPresenter
+                .PointerDownAsObservable
+                .Subscribe(async _ => await SceneManager.LoadSceneAsync(SceneDef.HomeScene))
                 .AddTo(_backGroundPresenter.TargetView);
 
             _staffCreditPresenter
