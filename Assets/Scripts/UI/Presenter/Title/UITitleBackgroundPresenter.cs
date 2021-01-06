@@ -5,9 +5,9 @@ using UniRx;
 
 namespace UI.Presenter.Title
 {
-    public sealed class UITitleBackGroundPresenter : PresenterBase<UITitleBackGroundWindow>
+    public sealed class UITitleBackgroundPresenter : PresenterBase<UITitleBackgroundWindow>
     {
-        public UITitleBackGroundPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
+        public UITitleBackgroundPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
         {
         }
 

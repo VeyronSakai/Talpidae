@@ -12,31 +12,31 @@ namespace UI.Page.Title
 {
     public sealed class UITitleTopPage : PageBase
     {
-        private readonly UITitleBackGroundPresenter _backGroundPresenter;
+        private readonly UITitleBackgroundPresenter _backgroundPresenter;
         private readonly UITitleStaffCreditPresenter _staffCreditPresenter;
 
         public UITitleTopPage(AppCanvasContainer canvasContainer)
         {
-            _backGroundPresenter =
-                CreatePresenter<UITitleBackGroundPresenter, UITitleBackGroundWindow>(canvasContainer.App0Canvas,
+            _backgroundPresenter =
+                CreatePresenter<UITitleBackgroundPresenter, UITitleBackgroundWindow>(canvasContainer.App0Canvas,
                     UITitlePrefabPathDef.UITitleBackgroundWindow);
 
             _staffCreditPresenter =
                 CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasContainer.App1Canvas,
                     UITitlePrefabPathDef.UITitleStaffCreditDialog);
 
-            _backGroundPresenter.SetActiveView(true);
+            _backgroundPresenter.SetActiveView(true);
 
             // イベントの購読
-            _backGroundPresenter
+            _backgroundPresenter
                 .CreditButtonOnClickAsObservable
                 .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
-                .AddTo(_backGroundPresenter.TargetView);
+                .AddTo(_backgroundPresenter.TargetView);
 
-            _backGroundPresenter
+            _backgroundPresenter
                 .PointerDownAsObservable
                 .Subscribe(async _ => await SceneManager.LoadSceneAsync(SceneDef.HomeScene))
-                .AddTo(_backGroundPresenter.TargetView);
+                .AddTo(_backgroundPresenter.TargetView);
 
             _staffCreditPresenter
                 .ReturnButtonAsObservable

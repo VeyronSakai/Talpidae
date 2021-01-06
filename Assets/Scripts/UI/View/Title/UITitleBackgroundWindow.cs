@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace UI.View.Title
 {
-    public sealed class UITitleBackGroundWindow : ViewBase
+    public sealed class UITitleBackgroundWindow : ViewBase
     {
         [SerializeField] private PointerEventHandler pointerEventHandler;
         [SerializeField] private Button creditButton;
