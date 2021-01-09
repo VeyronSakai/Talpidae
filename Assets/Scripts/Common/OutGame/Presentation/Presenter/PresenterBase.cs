@@ -37,6 +37,24 @@ namespace Common.OutGame.Presentation.Presenter
             SetActiveView(false);
         }
 
+        /// <summary>
+        /// Windowを開く
+        /// </summary>
+        public async UniTask ShowWindowCommonAsync()
+        {
+            SetActiveView(true);
+            await TargetView.PlayOpenAnimationAsync();
+        }
+        
+        /// <summary>
+        /// Windowを閉じる
+        /// </summary>
+        public async UniTask HideWindowCommonAsync()
+        {
+            await TargetView.PlayOpenAnimationAsync();
+            SetActiveView(false);
+        }
+
         public void SetActiveView(bool isActive)
         {
             TargetView.gameObject.SetActive(isActive);

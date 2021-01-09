@@ -1,7 +1,6 @@
 using Common.OutGame.Canvas;
 using Common.OutGame.Presentation.Page;
 using UI.Def;
-using UI.Page.Title;
 using UI.Presenter.Home;
 using UI.View.Home;
 using UniRx;
@@ -19,9 +18,10 @@ namespace UI.Page.Home
                     UIHomePrefabPathDef.UIHomeBackgroundWindow);
 
             _backgroundPresenter.SetActiveView(true);
-            
-            _backgroundPresenter.MatchingButtonOnClickAsObservable
-                .Subscribe(_ => ShowPage<UITitleTopPage>(canvasContainer)) // TODO: sakai マッチング画面に遷移する
+
+            _backgroundPresenter
+                .MatchingButtonOnClickAsObservable
+                .Subscribe(_ => ShowPage<UIHomeMatchingPage>(canvasContainer))
                 .AddTo(_backgroundPresenter.TargetView);
         }
     }
