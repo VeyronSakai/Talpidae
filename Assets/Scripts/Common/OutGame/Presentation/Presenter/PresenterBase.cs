@@ -1,12 +1,11 @@
-﻿using System;
-using Common.OutGame.Canvas;
+﻿using Common.OutGame.Canvas;
 using Common.OutGame.Presentation.View;
 using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 
 namespace Common.OutGame.Presentation.Presenter
 {
-    public abstract class PresenterBase<T> : IDisposable where T : ViewBase
+    public abstract class PresenterBase<T> : IPresenter where T : ViewBase
     {
         public T TargetView;
         private readonly AppCanvas _appCanvas;

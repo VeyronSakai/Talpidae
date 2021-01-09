@@ -477,6 +477,8 @@ GameObject:
   - component: {fileID: 7525158427848225029}
   - component: {fileID: 7525158427848225031}
   - component: {fileID: 7525158427848225028}
+  - component: {fileID: 1259938964902817996}
+  - component: {fileID: -1808389034012303401}
   m_Layer: 0
   m_Name: UIHomeBackgroundWindow
   m_TagString: Untagged
@@ -542,6 +544,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &1259938964902817996
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525158427848225026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &-1808389034012303401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525158427848225026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ee41d47b7f440109ce1c33bc9da94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  gachaButton: {fileID: 4278725337726799962}
+  costumeButton: {fileID: 1764770350453562856}
+  matchingButton: {fileID: 40142659412345493}
 --- !u!1 &9085998822143916124
 GameObject:
   m_ObjectHideFlags: 0
