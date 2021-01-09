@@ -28,12 +28,12 @@ namespace UI.Page.Title
 
             // イベントの購読
             _backgroundPresenter
-                .CreditButtonOnClickAsObservable
+                .OnTapCreditButton
                 .Subscribe(async _ => await _staffCreditPresenter.ShowAsync())
                 .AddTo(_backgroundPresenter.TargetView);
 
             _backgroundPresenter
-                .PointerDownAsObservable
+                .OnPointerDown
                 .Subscribe(async _ => await SceneManager.LoadSceneAsync(SceneDef.HomeScene))
                 .AddTo(_backgroundPresenter.TargetView);
 

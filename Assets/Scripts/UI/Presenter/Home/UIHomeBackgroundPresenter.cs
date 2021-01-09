@@ -11,8 +11,8 @@ namespace UI.Presenter.Home
         {
         }
 
-        public IObservable<Unit> GachaButtonOnClickAsObservable => TargetView.GachaButtonOnClickAsObservable;
-        public IObservable<Unit> CostumeButtonOnClickAsObservable => TargetView.CostumeButtonOnClickAsObservable;
-        public IObservable<Unit> MatchingButtonOnClickAsObservable => TargetView.MatchingButtonOnClickAsObservable;
+        public IObservable<Unit> OnTapGachaButton => TargetView.OnTapGachaButton;
+        public IObservable<Unit> OnTapCostumeButton => TargetView.OnTapCostumeButton;
+        public IObservable<Unit> OnTapMatchingButton => TargetView.OnTapMatchingButton;
     }
 }

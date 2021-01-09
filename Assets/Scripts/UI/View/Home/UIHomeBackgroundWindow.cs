@@ -12,8 +12,8 @@ namespace UI.View.Home
         [SerializeField] private Button costumeButton = default;
         [SerializeField] private Button matchingButton = default;
 
-        public IObservable<Unit> GachaButtonOnClickAsObservable => gachaButton.OnClickAsObservable();
-        public IObservable<Unit> CostumeButtonOnClickAsObservable => costumeButton.OnClickAsObservable();
-        public IObservable<Unit> MatchingButtonOnClickAsObservable => matchingButton.OnClickAsObservable();
+        public IObservable<Unit> OnTapGachaButton => gachaButton.OnClickAsObservable();
+        public IObservable<Unit> OnTapCostumeButton => costumeButton.OnClickAsObservable();
+        public IObservable<Unit> OnTapMatchingButton => matchingButton.OnClickAsObservable();
     }
 }

@@ -8,7 +8,7 @@ namespace UI.Presenter.Title
 {
     public sealed class UITitleStaffCreditPresenter : PresenterBase<UITitleStaffCreditDialog>
     {
-        public IObservable<Unit> ReturnButtonAsObservable => TargetView.ReturnButtonOnClickAsObservable;
+        public IObservable<Unit> ReturnButtonAsObservable => TargetView.OnTapReturnButton;
 
         public UITitleStaffCreditPresenter(PrefabGenParams prefabGenParams) : base(prefabGenParams)
         {
@@ -18,7 +18,7 @@ namespace UI.Presenter.Title
         {
             await ShowDialogCommonAsync();
         }
-        
+
         public async UniTask HideAsync()
         {
             await HideDialogCommonAsync();

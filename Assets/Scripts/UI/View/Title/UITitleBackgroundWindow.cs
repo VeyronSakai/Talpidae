@@ -12,7 +12,7 @@ namespace UI.View.Title
         [SerializeField] private PointerEventHandler pointerEventHandler;
         [SerializeField] private Button creditButton;
 
-        public IObservable<Unit> CreditButtonOnClickAsObservable => creditButton.OnClickAsObservable();
-        public IObservable<Unit> PointerDownAsObservable => pointerEventHandler.PointerDownSubject;
+        public IObservable<Unit> OnTapCreditButton => creditButton.OnClickAsObservable();
+        public IObservable<Unit> OnPointerDown => pointerEventHandler.PointerDownSubject;
     }
 }

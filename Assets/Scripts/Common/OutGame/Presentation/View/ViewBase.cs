@@ -31,13 +31,13 @@ namespace Common.OutGame.Presentation.View
             SetAnimation();
             await AnimationPlayer.PlayAsync(_animation, openClip);
         }
-        
+
         public async UniTask PlayCloseAnimationAsync()
         {
             SetAnimation();
             await AnimationPlayer.PlayAsync(_animation, closeClip);
         }
-        
+
         private void SetAnimation()
         {
             if (_animation == null)

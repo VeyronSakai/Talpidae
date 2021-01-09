@@ -20,7 +20,7 @@ namespace UI.Page.Home
             _backgroundPresenter.SetActiveView(true);
 
             _backgroundPresenter
-                .MatchingButtonOnClickAsObservable
+                .OnTapMatchingButton
                 .Subscribe(_ => ShowPage<UIHomeMatchingPage>(canvasContainer))
                 .AddTo(_backgroundPresenter.TargetView);
         }

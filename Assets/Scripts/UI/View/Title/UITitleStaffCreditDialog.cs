@@ -9,6 +9,6 @@ namespace UI.View.Title
     public sealed class UITitleStaffCreditDialog : ViewBase
     {
         [SerializeField] private Button returnButton = default;
-        public IObservable<Unit> ReturnButtonOnClickAsObservable => returnButton.OnClickAsObservable();
+        public IObservable<Unit> OnTapReturnButton => returnButton.OnClickAsObservable();
     }
 }
