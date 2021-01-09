@@ -12,21 +12,21 @@ namespace Common.OutGame.Presentation.Presenter
 
         public static TPresenter Create(PrefabGenParams genParams)
         {
-            _delegateCache ??= CreateInstanceDelegate<TPresenter>();
+            _delegateCache ??= CreateInstanceDelegate();
 
             return _delegateCache(genParams);
         }
 
-        private static Func<PrefabGenParams, TResult> CreateInstanceDelegate<TResult>()
+        private static Func<PrefabGenParams, TPresenter> CreateInstanceDelegate()
         {
-            var constructorInfo = typeof(TResult).GetConstructor(BindingFlags.Public | BindingFlags.Instance,
+            var constructorInfo = typeof(TPresenter).GetConstructor(BindingFlags.Public | BindingFlags.Instance,
                 Type.DefaultBinder, new[] {typeof(PrefabGenParams)}, null);
 
             if (constructorInfo == null) throw new ArgumentNullException();
 
             var arg = Expression.Parameter(typeof(PrefabGenParams));
 
-            return Expression.Lambda<Func<PrefabGenParams, TResult>>(Expression.New(constructorInfo, arg), arg)
+            return Expression.Lambda<Func<PrefabGenParams, TPresenter>>(Expression.New(constructorInfo, arg), arg)
                 .Compile();
         }
     }
