@@ -87,6 +87,16 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.veyronsakai.animationplayer": {
+      "version": "file:../LocalPackages/AnimationPlayer/com.veyronsakai.animationplayer",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.test-framework": "1.0.0",
+        "com.unity.ext.nunit": "1.0.0",
+        "com.cysharp.unitask": "2.1.0"
+      }
+    },
     "com.veyronsakai.prefabgenerator": {
       "version": "file:../LocalPackages/PrefabGenerator/com.veyronsakai.prefabgenerator",
       "depth": 0,
