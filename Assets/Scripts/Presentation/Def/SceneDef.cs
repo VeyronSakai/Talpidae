@@ -1,4 +1,4 @@
-namespace UI.Def
+namespace Presentation.Def
 {
     public static class SceneDef
     {

@@ -5,7 +5,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.View.Title
+namespace Presentation.View.Title
 {
     public sealed class UITitleBackgroundWindow : ViewBase
     {

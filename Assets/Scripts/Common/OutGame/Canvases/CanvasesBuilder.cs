@@ -2,11 +2,11 @@
 using Common.OutGame.Def;
 using Common.OutGame.Presentation.Presenter;
 using PrefabGenerator;
-using UI.Presenter.Title;
-using UI.View.Title;
+using Presentation.Presenter.Title;
+using Presentation.View.Title;
 using UnityEngine;
 
-namespace Common.OutGame.Canvas
+namespace Common.OutGame.Canvases
 {
     public sealed class CanvasesBuilder
     {

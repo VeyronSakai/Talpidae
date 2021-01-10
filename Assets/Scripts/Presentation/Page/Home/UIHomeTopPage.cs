@@ -1,11 +1,11 @@
-using Common.OutGame.Canvas;
+using Common.OutGame.Canvases;
 using Common.OutGame.Presentation.Page;
-using UI.Def;
-using UI.Presenter.Home;
-using UI.View.Home;
+using Presentation.Def;
+using Presentation.Presenter.Home;
+using Presentation.View.Home;
 using UniRx;
 
-namespace UI.Page.Home
+namespace Presentation.Page.Home
 {
     public sealed class UIHomeTopPage : PageBase
     {

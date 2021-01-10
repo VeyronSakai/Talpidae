@@ -1,4 +1,4 @@
-﻿using Common.OutGame.Canvas;
+﻿using Common.OutGame.Canvases;
 
 namespace Common.OutGame.Presentation.Presenter
 {

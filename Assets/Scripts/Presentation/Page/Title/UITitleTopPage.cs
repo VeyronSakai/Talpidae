@@ -1,13 +1,13 @@
-﻿using Common.OutGame.Canvas;
+﻿using Common.OutGame.Canvases;
 using Common.OutGame.Presentation.Page;
 using Cysharp.Threading.Tasks;
-using UI.Def;
-using UI.Presenter.Title;
-using UI.View.Title;
+using Presentation.Def;
+using Presentation.Presenter.Title;
+using Presentation.View.Title;
 using UniRx;
 using UnityEngine.SceneManagement;
 
-namespace UI.Page.Title
+namespace Presentation.Page.Title
 {
     public sealed class UITitleTopPage : PageBase
     {

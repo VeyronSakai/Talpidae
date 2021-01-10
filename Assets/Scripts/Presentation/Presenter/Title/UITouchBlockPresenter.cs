@@ -1,7 +1,7 @@
 ﻿using Common.OutGame.Presentation.Presenter;
-using UI.View.Title;
+using Presentation.View.Title;
 
-namespace UI.Presenter.Title
+namespace Presentation.Presenter.Title
 {
     public sealed class UITouchBlockPresenter : PresenterBase<UITouchBlockWindow>
     {

@@ -1,4 +1,4 @@
-﻿using Common.OutGame.Canvas;
+﻿using Common.OutGame.Canvases;
 using Common.OutGame.Presentation.View;
 using Cysharp.Threading.Tasks;
 using PrefabGenerator;

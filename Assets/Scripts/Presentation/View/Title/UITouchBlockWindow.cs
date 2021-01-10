@@ -1,6 +1,6 @@
 ﻿using Common.OutGame.Presentation.View;
 
-namespace UI.View.Title
+namespace Presentation.View.Title
 {
     public sealed class UITouchBlockWindow : ViewBase
     {

@@ -1,8 +1,8 @@
 using Common;
 using Common.Camera;
-using Common.OutGame.Canvas;
+using Common.OutGame.Canvases;
 using Common.OutGame.Def;
-using UI.Page.Home;
+using Presentation.Page.Home;
 
 namespace Main
 {

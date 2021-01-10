@@ -1,10 +1,10 @@
 using System;
 using Common.OutGame.Presentation.Presenter;
 using Cysharp.Threading.Tasks;
-using UI.View.Title;
+using Presentation.View.Title;
 using UniRx;
 
-namespace UI.Presenter.Title
+namespace Presentation.Presenter.Title
 {
     public sealed class UITitleStaffCreditPresenter : PresenterBase<UITitleStaffCreditDialog>
     {

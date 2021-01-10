@@ -1,5 +1,5 @@
 using Common.Camera;
-using Common.OutGame.Canvas;
+using Common.OutGame.Canvases;
 
 namespace Common
 {

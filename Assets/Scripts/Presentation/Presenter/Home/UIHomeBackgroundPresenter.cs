@@ -1,9 +1,9 @@
 using System;
 using Common.OutGame.Presentation.Presenter;
-using UI.View.Home;
+using Presentation.View.Home;
 using UniRx;
 
-namespace UI.Presenter.Home
+namespace Presentation.Presenter.Home
 {
     public sealed class UIHomeBackgroundPresenter : PresenterBase<UIHomeBackgroundWindow>
     {

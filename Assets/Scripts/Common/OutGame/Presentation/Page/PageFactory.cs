@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Common.OutGame.Canvas;
+using Common.OutGame.Canvases;
 
 namespace Common.OutGame.Presentation.Page
 {

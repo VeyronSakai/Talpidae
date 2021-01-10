@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.OutGame.Canvas;
+using Common.OutGame.Canvases;
 using Common.OutGame.Presentation.Presenter;
 using Common.OutGame.Presentation.View;
 

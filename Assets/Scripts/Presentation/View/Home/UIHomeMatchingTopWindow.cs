@@ -4,7 +4,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.View.Home
+namespace Presentation.View.Home
 {
     public sealed class UIHomeMatchingTopWindow : ViewBase
     {

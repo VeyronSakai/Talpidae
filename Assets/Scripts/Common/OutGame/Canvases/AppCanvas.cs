@@ -1,17 +1,17 @@
 ﻿using Common.Camera;
 using PrefabGenerator;
-using UI.Presenter.Title;
+using Presentation.Presenter.Title;
 using UnityEngine;
 
-namespace Common.OutGame.Canvas
+namespace Common.OutGame.Canvases
 {
     public class AppCanvas : PrefabBase
     {
         private Transform _canvasTransform;
-        private UnityEngine.Canvas _rawCanvas;
+        private Canvas _rawCanvas;
         private UITouchBlockPresenter _touchBlockPresenter;
 
-        public UnityEngine.Canvas GetRawCanvas()
+        public Canvas GetRawCanvas()
         {
             if (_rawCanvas == null) _rawCanvas = GetComponent<UnityEngine.Canvas>();
 

@@ -1,9 +1,9 @@
 ﻿using System;
 using Common.OutGame.Presentation.Presenter;
-using UI.View.Title;
+using Presentation.View.Title;
 using UniRx;
 
-namespace UI.Presenter.Title
+namespace Presentation.Presenter.Title
 {
     public sealed class UITitleBackgroundPresenter : PresenterBase<UITitleBackgroundWindow>
     {

@@ -1,4 +1,4 @@
-﻿namespace Common.OutGame.Canvas
+﻿namespace Common.OutGame.Canvases
 {
     public class AppCanvasContainer
     {
