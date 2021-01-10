@@ -3,7 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Common.Animation
+namespace Common.Animations
 {
     public static class AnimationPlayer
     {

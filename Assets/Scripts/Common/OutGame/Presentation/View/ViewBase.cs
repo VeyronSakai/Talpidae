@@ -1,4 +1,4 @@
-﻿using Common.Animation;
+﻿using Common.Animations;
 using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 using UnityEngine;
