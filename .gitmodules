@@ -1,6 +1,6 @@
 [submodule "LocalPackages/PrefabGenerator"]
 	path = LocalPackages/PrefabGenerator
 	url = https://github.com/VeyronSakai/PrefabGenerator.git
-[submodule "LocalPackages/AnimationPlayer"]
-	path = LocalPackages/AnimationPlayer
-	url = git@github.com:VeyronSakai/AnimationPlayer.git
+[submodule "LocalPackages/AnimationUtilities"]
+	path = LocalPackages/AnimationUtilities
+	url = https://github.com/VeyronSakai/AnimationUtilities.git
