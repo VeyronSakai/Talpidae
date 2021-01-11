@@ -106,6 +106,19 @@
         "com.unity.ext.nunit": "1.0.0"
       }
     },
+    "com.veyronsakai.unipresentation": {
+      "version": "file:../LocalPackages/UniPresentation/com.veyronsakai.unipresentation",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.test-framework": "1.0.0",
+        "com.unity.ext.nunit": "1.0.0",
+        "com.cysharp.unitask": "2.1.0",
+        "com.neuecc.unirx": "7.1.0",
+        "com.veyronsakai.animationutilities": "0.0.1",
+        "com.veyronsakai.prefabgenerator": "0.0.4"
+      }
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

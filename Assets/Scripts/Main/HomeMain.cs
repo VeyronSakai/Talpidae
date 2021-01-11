@@ -1,8 +1,9 @@
 using Common;
 using Common.Camera;
-using Common.OutGame.Canvases;
 using Common.OutGame.Def;
+using Presentation.Canvases;
 using Presentation.Page.Home;
+using UniPresentation.Page;
 
 namespace Main
 {
@@ -27,7 +28,7 @@ namespace Main
 
         protected override void OnStart()
         {
-            new UIHomeTopPage(_hierarchy.AppCanvasContainer);
+            PageFactory<UIHomeTopPage, AppCanvasContainer>.Create(_hierarchy.AppCanvasContainer);
         }
 
         protected override void OnUpdate()

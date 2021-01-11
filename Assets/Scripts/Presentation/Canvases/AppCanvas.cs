@@ -1,11 +1,12 @@
 ﻿using Common.Camera;
 using PrefabGenerator;
 using Presentation.Presenter.Title;
+using UniPresentation.Shared.Canvases;
 using UnityEngine;
 
-namespace Common.OutGame.Canvases
+namespace Presentation.Canvases
 {
-    public class AppCanvas : PrefabBase
+    public class AppCanvas : PrefabBase, ICanvas
     {
         private Transform _canvasTransform;
         private Canvas _rawCanvas;

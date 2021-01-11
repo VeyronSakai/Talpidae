@@ -1,6 +1,6 @@
 using System;
-using Common.OutGame.Presentation.Presenter;
 using Presentation.View.Home;
+using UniPresentation.Presenter;
 using UniRx;
 
 namespace Presentation.Presenter.Home

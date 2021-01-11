@@ -1,8 +1,8 @@
-using Common.OutGame.Canvases;
-using Common.OutGame.Presentation.Page;
+using Presentation.Canvases;
 using Presentation.Def;
 using Presentation.Presenter.Home;
 using Presentation.View.Home;
+using UniPresentation.Page;
 using UniRx;
 
 namespace Presentation.Page.Home
@@ -11,7 +11,7 @@ namespace Presentation.Page.Home
     {
         private readonly UIHomeBackgroundPresenter _backgroundPresenter;
 
-        public UIHomeTopPage(AppCanvasContainer canvasContainer)
+        public UIHomeTopPage(AppCanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
                 CreatePresenter<UIHomeBackgroundPresenter, UIHomeBackgroundWindow>(canvasContainer.App0Canvas,
@@ -21,7 +21,7 @@ namespace Presentation.Page.Home
 
             _backgroundPresenter
                 .OnTapMatchingButton
-                .Subscribe(_ => ShowPage<UIHomeMatchingPage>(canvasContainer))
+                .Subscribe(_ => ShowPage<UIHomeMatchingPage, AppCanvasContainer>(canvasContainer))
                 .AddTo(_backgroundPresenter.TargetView);
         }
     }

@@ -1,9 +1,9 @@
-using Common.OutGame.Canvases;
-using Common.OutGame.Presentation.Page;
 using Cysharp.Threading.Tasks;
 using Presentation.Def;
 using Presentation.Presenter.Home;
 using Presentation.View.Home;
+using UniPresentation.Page;
+using UniPresentation.Shared.Canvases;
 
 namespace Presentation.Page.Home
 {
@@ -11,7 +11,7 @@ namespace Presentation.Page.Home
     {
         private readonly UIHomeMatchingTopPresenter _matchingTopPresenter;
 
-        public UIHomeMatchingPage(AppCanvasContainer canvasContainer)
+        public UIHomeMatchingPage(ICanvasContainer canvasContainer) : base(canvasContainer)
         {
             _matchingTopPresenter =
                 CreatePresenter<UIHomeMatchingTopPresenter, UIHomeMatchingTopWindow>(canvasContainer.App0Canvas,

@@ -1,7 +1,7 @@
 ﻿using Common;
 using Common.Camera;
-using Common.OutGame.Canvases;
 using Common.OutGame.Def;
+using Presentation.Canvases;
 using Presentation.Page.Title;
 
 namespace Main

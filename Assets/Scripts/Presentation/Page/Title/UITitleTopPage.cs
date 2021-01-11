@@ -1,9 +1,10 @@
-﻿using Common.OutGame.Canvases;
-using Common.OutGame.Presentation.Page;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Presentation.Def;
 using Presentation.Presenter.Title;
 using Presentation.View.Title;
+using UniPresentation.Page;
+using UniPresentation.Shared;
+using UniPresentation.Shared.Canvases;
 using UniRx;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,7 @@ namespace Presentation.Page.Title
         private readonly UITitleBackgroundPresenter _backgroundPresenter;
         private readonly UITitleStaffCreditPresenter _staffCreditPresenter;
 
-        public UITitleTopPage(AppCanvasContainer canvasContainer)
+        public UITitleTopPage(ICanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
                 CreatePresenter<UITitleBackgroundPresenter, UITitleBackgroundWindow>(canvasContainer.App0Canvas,

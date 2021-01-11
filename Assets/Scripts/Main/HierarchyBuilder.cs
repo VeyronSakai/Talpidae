@@ -1,6 +1,6 @@
 ﻿using Common;
 using Common.Camera;
-using Common.OutGame.Canvases;
+using Presentation.Canvases;
 
 namespace Main
 {

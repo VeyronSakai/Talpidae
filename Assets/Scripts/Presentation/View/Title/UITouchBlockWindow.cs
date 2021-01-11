@@ -1,4 +1,4 @@
-﻿using Common.OutGame.Presentation.View;
+﻿using UniPresentation.View;
 
 namespace Presentation.View.Title
 {

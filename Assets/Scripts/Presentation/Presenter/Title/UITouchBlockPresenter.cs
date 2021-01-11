@@ -1,5 +1,5 @@
-﻿using Common.OutGame.Presentation.Presenter;
-using Presentation.View.Title;
+﻿using Presentation.View.Title;
+using UniPresentation.Presenter;
 
 namespace Presentation.Presenter.Title
 {

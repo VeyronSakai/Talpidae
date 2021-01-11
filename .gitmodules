@@ -4,3 +4,6 @@
 [submodule "LocalPackages/AnimationUtilities"]
 	path = LocalPackages/AnimationUtilities
 	url = https://github.com/VeyronSakai/AnimationUtilities.git
+[submodule "LocalPackages/UniPresentation"]
+	path = LocalPackages/UniPresentation
+	url = https://github.com/VeyronSakai/UniPresentation.git

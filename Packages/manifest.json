@@ -12,6 +12,7 @@
     "com.unity.ugui": "1.0.0",
     "com.veyronsakai.prefabgenerator": "file:../LocalPackages/PrefabGenerator/com.veyronsakai.prefabgenerator",
     "com.veyronsakai.animationutilities": "file:../LocalPackages/AnimationUtilities/com.veyronsakai.animationutilities",
+    "com.veyronsakai.unipresentation": "file:../LocalPackages/UniPresentation/com.veyronsakai.unipresentation",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -45,6 +46,8 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "testables": [
-    "com.veyronsakai.prefabgenerator"
+    "com.veyronsakai.prefabgenerator",
+    "com.veyronsakai.animationutilities",
+    "com.veyronsakai.unipresentation"
   ]
 }

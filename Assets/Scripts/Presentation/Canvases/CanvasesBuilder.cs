@@ -1,12 +1,12 @@
 ﻿using Common.Camera;
 using Common.OutGame.Def;
-using Common.OutGame.Presentation.Presenter;
 using PrefabGenerator;
 using Presentation.Presenter.Title;
 using Presentation.View.Title;
+using UniPresentation.Presenter;
 using UnityEngine;
 
-namespace Common.OutGame.Canvases
+namespace Presentation.Canvases
 {
     public sealed class CanvasesBuilder
     {
