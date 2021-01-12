@@ -1,5 +1,5 @@
 ﻿using System;
-using Common.OutGame.Event;
+using UniPresentation.Event;
 using UniPresentation.View;
 using UniRx;
 using UnityEngine;
