@@ -15,9 +15,9 @@ namespace Main
             _canvasesBuilder = canvasesBuilder;
         }
 
-        public Hierarchy BuildHierarchy<T>(string cameraPrefabPath) where T : CameraBase
+        public Hierarchy BuildHierarchy<T>(string cameraPrefabPath, string cameraRootName) where T : CameraBase
         {
-            var camera = _cameraBuilder.BuildCamera<T>(cameraPrefabPath);
+            var camera = _cameraBuilder.BuildCamera<T>(cameraPrefabPath, cameraRootName);
 
             var canvasContainer = _canvasesBuilder.BuildCanvases(camera);
 

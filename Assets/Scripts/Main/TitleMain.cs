@@ -23,7 +23,9 @@ namespace Main
 
         protected override void OnAwake()
         {
-            _hierarchy = _hierarchyBuilder.BuildHierarchy<TitleCamera>(UICommonDef.TitleCameraPrefabPath);
+            _hierarchy =
+                _hierarchyBuilder.BuildHierarchy<TitleCamera>(UICommonDef.TitleCameraPrefabPath,
+                    UICommonDef.CameraRootName);
         }
 
         protected override void OnStart()

@@ -1,5 +1,4 @@
-﻿using Common.OutGame.Def;
-using PrefabGenerator;
+﻿using PrefabGenerator;
 using UnityEngine;
 
 namespace Common.Camera
@@ -13,11 +12,11 @@ namespace Common.Camera
             _parentTransform = parentTransform;
         }
 
-        public ICamera BuildCamera<T>(string cameraPrefabPath) where T : CameraBase
+        public ICamera BuildCamera<T>(string cameraPrefabPath, string cameraRootName) where T : CameraBase
         {
-            var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, _parentTransform);
-            var titleCamera = PrefabFactory.Create<T>(cameraPrefabPath, cameraRoot.transform);
-            return titleCamera;
+            var cameraRoot = EmptyObjectFactory.Create(cameraRootName, _parentTransform);
+            var camera = PrefabFactory.Create<T>(cameraPrefabPath, cameraRoot.transform);
+            return camera;
         }
     }
 }
