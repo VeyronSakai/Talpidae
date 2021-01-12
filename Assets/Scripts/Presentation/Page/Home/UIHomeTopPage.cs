@@ -14,7 +14,7 @@ namespace Presentation.Page.Home
         public UIHomeTopPage(AppCanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
-                CreatePresenter<UIHomeBackgroundPresenter, UIHomeBackgroundWindow>(canvasContainer.App0Canvas,
+                CreatePresenter<UIHomeBackgroundPresenter, UIHomeBackgroundWindow>(canvasContainer.Canvases[0],
                     UIHomePrefabPathDef.UIHomeBackgroundWindow);
 
             _backgroundPresenter.SetActiveView(true);

@@ -17,11 +17,11 @@ namespace Presentation.Page.Title
         public UITitleTopPage(ICanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
-                CreatePresenter<UITitleBackgroundPresenter, UITitleBackgroundWindow>(canvasContainer.App0Canvas,
+                CreatePresenter<UITitleBackgroundPresenter, UITitleBackgroundWindow>(canvasContainer.Canvases[0],
                     UITitlePrefabPathDef.UITitleBackgroundWindow);
 
             _staffCreditPresenter =
-                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasContainer.App1Canvas,
+                CreatePresenter<UITitleStaffCreditPresenter, UITitleStaffCreditDialog>(canvasContainer.Canvases[1],
                     UITitlePrefabPathDef.UITitleStaffCreditDialog);
 
             _backgroundPresenter.SetActiveView(true);

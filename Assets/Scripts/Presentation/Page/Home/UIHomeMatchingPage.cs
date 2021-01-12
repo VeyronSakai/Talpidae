@@ -14,7 +14,7 @@ namespace Presentation.Page.Home
         public UIHomeMatchingPage(ICanvasContainer canvasContainer) : base(canvasContainer)
         {
             _matchingTopPresenter =
-                CreatePresenter<UIHomeMatchingTopPresenter, UIHomeMatchingTopWindow>(canvasContainer.App0Canvas,
+                CreatePresenter<UIHomeMatchingTopPresenter, UIHomeMatchingTopWindow>(canvasContainer.Canvases[0],
                     UIHomePrefabPathDef.UIHomeMatchingTopWindow);
 
             _matchingTopPresenter.ShowWindowCommonAsync().Forget();
