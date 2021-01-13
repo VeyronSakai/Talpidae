@@ -1,5 +1,5 @@
-using Common.Camera;
 using Presentation.Canvases;
+using UniPresentation.Camera;
 
 namespace Common
 {

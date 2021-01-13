@@ -1,8 +1,8 @@
-﻿using Common.Camera;
-using Common.OutGame.Def;
+﻿using Common.OutGame.Def;
 using PrefabGenerator;
 using Presentation.Presenter.Title;
 using Presentation.View.Title;
+using UniPresentation.Camera;
 using UniPresentation.Presenter;
 using UnityEngine;
 

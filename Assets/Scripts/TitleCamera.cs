@@ -1,4 +1,6 @@
-﻿namespace Common.Camera
+﻿using UniPresentation.Camera;
+
+namespace Common.Camera
 {
     public class TitleCamera : CameraBase
     {

@@ -3,6 +3,7 @@ using Common.Camera;
 using Common.OutGame.Def;
 using Presentation.Canvases;
 using Presentation.Page.Title;
+using UniPresentation.Camera;
 using UniPresentation.Page;
 
 namespace Main

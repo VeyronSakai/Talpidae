@@ -1,6 +1,7 @@
 ﻿using Common.Camera;
 using PrefabGenerator;
 using Presentation.Presenter.Title;
+using UniPresentation.Camera;
 using UniPresentation.Shared.Canvases;
 using UnityEngine;
 

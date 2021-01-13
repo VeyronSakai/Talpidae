@@ -1,3 +1,5 @@
+using UniPresentation.Camera;
+
 namespace Common.Camera
 {
     public class HomeCamera : CameraBase
