@@ -1,7 +1,7 @@
 ﻿using Cameras;
+using Canvases;
 using Common;
 using Common.OutGame.Def;
-using Presentation.Canvases;
 using Presentation.Page.Title;
 using UniPresentation.Camera;
 using UniPresentation.Page;
@@ -31,7 +31,7 @@ namespace Main
 
         protected override void OnStart()
         {
-            PageFactory<UITitleTopPage, AppCanvasContainer>.Create(_hierarchy.AppCanvasContainer);
+            PageFactory<UITitleTopPage>.Create(_hierarchy.CanvasContainer);
         }
 
         protected override void OnUpdate()

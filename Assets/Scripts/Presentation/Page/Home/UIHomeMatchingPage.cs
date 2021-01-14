@@ -2,8 +2,8 @@ using Cysharp.Threading.Tasks;
 using Presentation.Def;
 using Presentation.Presenter.Home;
 using Presentation.View.Home;
+using UniPresentation.Canvases;
 using UniPresentation.Page;
-using UniPresentation.Shared.Canvases;
 
 namespace Presentation.Page.Home
 {

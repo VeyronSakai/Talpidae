@@ -2,8 +2,8 @@
 using Presentation.Def;
 using Presentation.Presenter.Title;
 using Presentation.View.Title;
+using UniPresentation.Canvases;
 using UniPresentation.Page;
-using UniPresentation.Shared.Canvases;
 using UniRx;
 using UnityEngine.SceneManagement;
 

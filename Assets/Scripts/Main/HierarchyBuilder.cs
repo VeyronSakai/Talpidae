@@ -1,5 +1,5 @@
-﻿using Common;
-using Presentation.Canvases;
+﻿using Canvases;
+using Common;
 using UniPresentation.Camera;
 
 namespace Main

@@ -1,16 +1,16 @@
-using Presentation.Canvases;
 using UniPresentation.Camera;
+using UniPresentation.Canvases;
 
 namespace Common
 {
     public class Hierarchy
     {
-        public AppCanvasContainer AppCanvasContainer;
+        public ICanvasContainer CanvasContainer;
         public ICamera Camera;
 
-        public Hierarchy(AppCanvasContainer canvasContainer, ICamera camera)
+        public Hierarchy(ICanvasContainer canvasContainer, ICamera camera)
         {
-            AppCanvasContainer = canvasContainer;
+            CanvasContainer = canvasContainer;
             Camera = camera;
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using UniPresentation.Shared.Canvases;
+using UniPresentation.Canvases;
 
-namespace Presentation.Canvases
+namespace Canvases
 {
     public class AppCanvasContainer : ICanvasContainer
     {

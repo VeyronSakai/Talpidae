@@ -1,12 +1,11 @@
-﻿using PrefabGenerator;
-using Presentation.Presenter.Title;
+﻿using Presentation.Presenter.Title;
 using UniPresentation.Camera;
-using UniPresentation.Shared.Canvases;
+using UniPresentation.Canvases;
 using UnityEngine;
 
-namespace Presentation.Canvases
+namespace Canvases
 {
-    public class AppCanvas : PrefabBase, ICanvas
+    public class AppCanvas : CanvasBase
     {
         private Transform _canvasTransform;
         private Canvas _rawCanvas;
@@ -26,7 +25,7 @@ namespace Presentation.Canvases
             _rawCanvas.worldCamera = targetCamera.GetRawCamera();
         }
 
-        public Transform GetTransform()
+        public override Transform GetTransform()
         {
             if (_canvasTransform == null) _canvasTransform = transform;
 
@@ -38,12 +37,12 @@ namespace Presentation.Canvases
             _touchBlockPresenter = presenter;
         }
 
-        public void SetActiveTouchBlockWindow(bool isActive)
+        public override void SetActiveTouchBlockWindow(bool isActive)
         {
             _touchBlockPresenter.SetActiveView(isActive);
         }
 
-        public bool IsTouchBlockEnabled()
+        public override bool IsTouchBlockEnabled()
         {
             return _touchBlockPresenter.IsViewActive();
         }

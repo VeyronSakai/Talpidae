@@ -6,7 +6,7 @@ using UniPresentation.Camera;
 using UniPresentation.Presenter;
 using UnityEngine;
 
-namespace Presentation.Canvases
+namespace Canvases
 {
     public sealed class CanvasesBuilder
     {
