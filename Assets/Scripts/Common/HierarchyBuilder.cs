@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Canvases;
-using Common.OutGame.Def;
 using UniPresentation.Camera;
 using UniPresentation.Canvases;
 
@@ -17,21 +15,24 @@ namespace Common
             _canvasesBuilder = canvasesBuilder;
         }
 
-        public Hierarchy BuildHierarchy<T>(string cameraPrefabPath, string cameraRootName) where T : CameraBase
+        public Hierarchy BuildHierarchy<TCamera, TCanvasContainer>
+        (
+            string cameraRootName,
+            string cameraPrefabPath,
+            string canvasRootName,
+            List<string> canvasPaths,
+            string touchBlockWindowPrefabPath
+        )
+            where TCamera : CameraBase
+            where TCanvasContainer : ICanvasContainer
         {
-            var camera = _cameraBuilder.BuildCamera<T>(cameraPrefabPath, cameraRootName);
+            var camera = _cameraBuilder.BuildCamera<TCamera>(cameraPrefabPath, cameraRootName);
 
-            var canvasPaths = new List<string>()
-            {
-                UICommonDef.App0CanvasPrefabPath,
-                UICommonDef.App1CanvasPrefabPath
-            };
-
-            var canvasPathParams = new CanvasPathParams(UICommonDef.CameraRootName, canvasPaths);
+            var canvasPathParams = new CanvasPathParams(canvasRootName, canvasPaths);
 
             var canvasContainer =
-                _canvasesBuilder.BuildCanvases<AppCanvasContainer>(camera, canvasPathParams,
-                    UICommonDef.UITouchBlockWindow);
+                _canvasesBuilder.BuildCanvases<TCanvasContainer>(camera, canvasPathParams,
+                    touchBlockWindowPrefabPath);
 
             var hierarchy = new Hierarchy(canvasContainer, camera);
             return hierarchy;

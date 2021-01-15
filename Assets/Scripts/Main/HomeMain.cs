@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Cameras;
+using Canvases;
 using Common;
 using Common.OutGame.Def;
 using Presentation.Page.Home;
@@ -24,9 +26,21 @@ namespace Main
 
         protected override void OnAwake()
         {
+            var canvasPaths = new List<string>()
+            {
+                UICommonDef.App0CanvasPrefabPath,
+                UICommonDef.App1CanvasPrefabPath
+            };
+
             _hierarchy =
-                _hierarchyBuilder.BuildHierarchy<HomeCamera>(UICommonDef.HomeCameraPrefabPath,
-                    UICommonDef.CameraRootName);
+                _hierarchyBuilder.BuildHierarchy<HomeCamera, AppCanvasContainer>
+                (
+                    UICommonDef.CameraRootName,
+                    UICommonDef.HomeCameraPrefabPath,
+                    UICommonDef.CanvasRootName,
+                    canvasPaths,
+                    UICommonDef.UITouchBlockWindow
+                );
         }
 
         protected override void OnStart()
