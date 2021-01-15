@@ -1,6 +1,6 @@
-﻿using Presentation.Presenter.Title;
-using UniPresentation.Camera;
+﻿using UniPresentation.Camera;
 using UniPresentation.Canvases;
+using UniPresentation.TouchBlock;
 using UnityEngine;
 
 namespace Canvases
@@ -18,7 +18,7 @@ namespace Canvases
             return _rawCanvas;
         }
 
-        public void SetCamera(ICamera targetCamera)
+        public override void SetCamera(ICamera targetCamera)
         {
             if (_rawCanvas == null) _rawCanvas = GetComponent<UnityEngine.Canvas>();
 
@@ -32,7 +32,7 @@ namespace Canvases
             return _canvasTransform;
         }
 
-        public void SetTouchBlockPresenter(UITouchBlockPresenter presenter)
+        public override void SetTouchBlockPresenter(UITouchBlockPresenter presenter)
         {
             _touchBlockPresenter = presenter;
         }

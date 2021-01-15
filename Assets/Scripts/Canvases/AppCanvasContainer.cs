@@ -7,13 +7,9 @@ namespace Canvases
     {
         public List<ICanvas> Canvases { get; }
 
-        public AppCanvasContainer(ICanvas app0Canvas, ICanvas app1Canvas)
+        public AppCanvasContainer(List<ICanvas> canvases)
         {
-            Canvases = new List<ICanvas>()
-            {
-                app0Canvas,
-                app1Canvas
-            };
+            Canvases = canvases;
         }
     }
 }

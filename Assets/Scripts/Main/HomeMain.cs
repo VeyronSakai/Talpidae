@@ -1,9 +1,9 @@
 using Cameras;
-using Canvases;
 using Common;
 using Common.OutGame.Def;
 using Presentation.Page.Home;
 using UniPresentation.Camera;
+using UniPresentation.Canvases;
 using UniPresentation.Page;
 
 namespace Main
