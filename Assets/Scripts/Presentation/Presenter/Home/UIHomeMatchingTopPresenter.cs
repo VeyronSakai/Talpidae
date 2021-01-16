@@ -14,7 +14,6 @@ namespace Presentation.Presenter.Home
         public IObservable<Unit> OnTapAutoMatchingButton => TargetView.OnTapAutoMatchButton;
         public IObservable<Unit> OnTapCreateRoomButton => TargetView.OnTapCreateRoomButton;
         public IObservable<Unit> OnTapSearchRoomButton => TargetView.OnTapSearchRoomButton;
-        
-        
+        public IObservable<Unit> OnTapReturnButton => TargetView.OnTapReturnButton;
     }
 }

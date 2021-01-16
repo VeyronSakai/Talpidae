@@ -4,6 +4,7 @@ using Presentation.Presenter.Home;
 using Presentation.View.Home;
 using UniPresentation.Canvases;
 using UniPresentation.Page;
+using UniRx;
 
 namespace Presentation.Page.Home
 {
@@ -18,6 +19,11 @@ namespace Presentation.Page.Home
                     UIHomePrefabPathDef.UIHomeMatchingTopWindow);
 
             _matchingTopPresenter.ShowWindowCommonAsync().Forget();
+
+            _matchingTopPresenter
+                .OnTapReturnButton
+                .Subscribe(_ => ShowPage<UIHomeTopPage>(canvasContainer))
+                .AddTo(_matchingTopPresenter.TargetView);
         }
     }
 }

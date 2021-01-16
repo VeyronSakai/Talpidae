@@ -11,9 +11,11 @@ namespace Presentation.View.Home
         [SerializeField] private Button autoMatchButton = default;
         [SerializeField] private Button createRoomButton = default;
         [SerializeField] private Button searchRoomButton = default;
+        [SerializeField] private Button returnButton = default;
 
         public IObservable<Unit> OnTapAutoMatchButton => autoMatchButton.OnClickAsObservable();
         public IObservable<Unit> OnTapCreateRoomButton => createRoomButton.OnClickAsObservable();
         public IObservable<Unit> OnTapSearchRoomButton => searchRoomButton.OnClickAsObservable();
+        public IObservable<Unit> OnTapReturnButton => returnButton.OnClickAsObservable();
     }
 }
