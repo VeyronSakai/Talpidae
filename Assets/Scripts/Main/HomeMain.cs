@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using Cameras;
 using Canvases;
-using Common;
 using Common.OutGame.Def;
 using Presentation.Page.Home;
 using UniPresentation.Camera;
 using UniPresentation.Canvases;
+using UniPresentation.Hierarchy;
 using UniPresentation.Page;
 
 namespace Main
@@ -33,7 +33,7 @@ namespace Main
             };
 
             _hierarchy =
-                _hierarchyBuilder.BuildHierarchy<HomeCamera, AppCanvasContainer>
+                _hierarchyBuilder.BuildHierarchy<HomeCamera, CanvasContainer>
                 (
                     UICommonDef.CameraRootName,
                     UICommonDef.HomeCameraPrefabPath,

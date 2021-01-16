@@ -3,11 +3,11 @@ using UniPresentation.Canvases;
 
 namespace Canvases
 {
-    public class AppCanvasContainer : ICanvasContainer
+    public class CanvasContainer : ICanvasContainer
     {
         public List<ICanvas> Canvases { get; }
 
-        public AppCanvasContainer(List<ICanvas> canvases)
+        public CanvasContainer(List<ICanvas> canvases)
         {
             Canvases = canvases;
         }
