@@ -3,7 +3,7 @@ using UniPresentation.Canvases;
 using UniPresentation.TouchBlock;
 using UnityEngine;
 
-namespace Canvases
+namespace Common.Canvases
 {
     public class AppCanvas : CanvasBase
     {

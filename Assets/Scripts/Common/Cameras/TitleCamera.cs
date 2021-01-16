@@ -1,7 +1,7 @@
 ﻿using UniPresentation.Camera;
 using UnityEngine;
 
-namespace Cameras
+namespace Common.Cameras
 {
     public class TitleCamera : CameraBase
     {

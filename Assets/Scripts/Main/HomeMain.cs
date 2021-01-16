@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Cameras;
-using Common.OutGame.Def;
+using Common.Cameras;
+using Common.Def;
 using Presentation.Page.Home;
 using UniPresentation.Camera;
 using UniPresentation.Canvases;
