@@ -2,7 +2,7 @@
 using Common.Cameras;
 using Common.Def;
 using Presentation.Page.Title;
-using UniPresentation.Camera;
+using UniPresentation.Cameras;
 using UniPresentation.Canvases;
 using UniPresentation.Hierarchy;
 using UniPresentation.Page;
@@ -31,15 +31,14 @@ namespace Main
                 UICommonDef.App1CanvasPrefabPath
             };
 
-            _hierarchy =
-                _hierarchyBuilder.BuildHierarchy<TitleCamera>
-                (
-                    UICommonDef.CameraRootName,
-                    UICommonDef.TitleCameraPrefabPath,
-                    UICommonDef.CanvasRootName,
-                    canvasPaths,
-                    UICommonDef.UITouchBlockWindow
-                );
+            _hierarchy = _hierarchyBuilder.BuildHierarchy<TitleCamera>
+            (
+                UICommonDef.CameraRootName,
+                UICommonDef.TitleCameraPrefabPath,
+                UICommonDef.CanvasRootName,
+                canvasPaths,
+                UICommonDef.UITouchBlockWindow
+            );
         }
 
         protected override void OnStart()

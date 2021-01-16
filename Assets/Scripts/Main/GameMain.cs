@@ -1,25 +1,23 @@
 using System.Collections.Generic;
 using Common.Cameras;
 using Common.Def;
-using Presentation.Page.Home;
 using UniPresentation.Cameras;
 using UniPresentation.Canvases;
 using UniPresentation.Hierarchy;
-using UniPresentation.Page;
 
 namespace Main
 {
-    public sealed class HomeMain : MainBase
+    public sealed class GameMain : MainBase
     {
         private HierarchyBuilder _hierarchyBuilder;
         private Hierarchy _hierarchy;
 
         protected override void Inject()
         {
-            var homeMainTransform = transform;
+            var gameMainTransform = transform;
 
-            var homeCameraBuilder = new CameraBuilder(homeMainTransform);
-            var canvasBuilder = new CanvasesBuilder(homeMainTransform);
+            var homeCameraBuilder = new CameraBuilder(gameMainTransform);
+            var canvasBuilder = new CanvasesBuilder(gameMainTransform);
             _hierarchyBuilder = new HierarchyBuilder(homeCameraBuilder, canvasBuilder);
         }
 
@@ -31,7 +29,7 @@ namespace Main
                 UICommonDef.App1CanvasPrefabPath
             };
 
-            _hierarchy = _hierarchyBuilder.BuildHierarchy<HomeCamera>
+            _hierarchy = _hierarchyBuilder.BuildHierarchy<GameCamera>
             (
                 UICommonDef.CameraRootName,
                 UICommonDef.HomeCameraPrefabPath,
@@ -43,7 +41,6 @@ namespace Main
 
         protected override void OnStart()
         {
-            PageFactory<UIHomeTopPage>.Create(_hierarchy.CanvasContainer);
         }
 
         protected override void OnUpdate()

@@ -1,4 +1,4 @@
-﻿using UniPresentation.Camera;
+﻿using UniPresentation.Cameras;
 using UniPresentation.Canvases;
 using UniPresentation.TouchBlock;
 using UnityEngine;

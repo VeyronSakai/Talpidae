@@ -1,9 +1,9 @@
-using UniPresentation.Camera;
+using UniPresentation.Cameras;
 using UnityEngine;
 
 namespace Common.Cameras
 {
-    public class HomeCamera : CameraBase
+    public sealed class HomeCamera : CameraBase
     {
         private Camera _homeRawCamera;
 
