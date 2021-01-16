@@ -11,7 +11,7 @@ namespace Presentation.Page.Home
     {
         private readonly UIHomeBackgroundPresenter _backgroundPresenter;
 
-        public UIHomeTopPage(ICanvasContainer canvasContainer) : base(canvasContainer)
+        public UIHomeTopPage(CanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
                 CreatePresenter<UIHomeBackgroundPresenter, UIHomeBackgroundWindow>(canvasContainer.Canvases[0],

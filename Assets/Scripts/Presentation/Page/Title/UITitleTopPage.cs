@@ -14,7 +14,7 @@ namespace Presentation.Page.Title
         private readonly UITitleBackgroundPresenter _backgroundPresenter;
         private readonly UITitleStaffCreditPresenter _staffCreditPresenter;
 
-        public UITitleTopPage(ICanvasContainer canvasContainer) : base(canvasContainer)
+        public UITitleTopPage(CanvasContainer canvasContainer) : base(canvasContainer)
         {
             _backgroundPresenter =
                 CreatePresenter<UITitleBackgroundPresenter, UITitleBackgroundWindow>(canvasContainer.Canvases[0],

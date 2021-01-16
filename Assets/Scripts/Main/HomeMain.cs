@@ -32,7 +32,7 @@ namespace Main
             };
 
             _hierarchy =
-                _hierarchyBuilder.BuildHierarchy<HomeCamera, CanvasContainer>
+                _hierarchyBuilder.BuildHierarchy<HomeCamera>
                 (
                     UICommonDef.CameraRootName,
                     UICommonDef.HomeCameraPrefabPath,
