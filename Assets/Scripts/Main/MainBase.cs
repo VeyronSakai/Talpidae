@@ -5,6 +5,7 @@ namespace Main
     /// <summary>
     /// 各シーンのMainクラスの基底クラス
     /// </summary>
+    [DisallowMultipleComponent]
     public abstract class MainBase : MonoBehaviour
     {
         protected abstract void Inject();
