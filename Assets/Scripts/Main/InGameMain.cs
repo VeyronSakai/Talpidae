@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using Application;
 using Common.Cameras;
 using Common.Def;
+using Cysharp.Threading.Tasks;
 using PrefabGenerator;
 using UniPresentation.Cameras;
 using UniPresentation.Canvases;
@@ -11,14 +13,17 @@ namespace Main
     public sealed class InGameMain : MainBase
     {
         private CanvasContainer _canvasContainer;
+        private StageApplicationService _stageApplicationService;
 
         protected override void Inject()
         {
             SetUp();
+            _stageApplicationService = new StageApplicationService();
         }
 
         protected override void OnAwake()
         {
+            _stageApplicationService.StartStageAsync().Forget();
         }
 
         protected override void OnStart()
@@ -44,7 +49,8 @@ namespace Main
             var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, inGameMainTransform);
 
             // Cameraを作る
-            return CameraBuilder.BuildCamera<InGameBattleCamera>(UICommonDef.InGameBattleCameraPrefabPath, cameraRoot.transform);
+            return CameraBuilder.BuildCamera<InGameBattleCamera>(UICommonDef.InGameBattleCameraPrefabPath,
+                cameraRoot.transform);
         }
 
         private void BuildCanvas(Transform inGameMainTransform, ICamera inGameBattleCamera)
