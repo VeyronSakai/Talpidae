@@ -8,5 +8,10 @@ namespace Domain.Model
         {
             _cells = cells;
         }
+
+        public Cell[,] GetCells()
+        {
+            return _cells;
+        }
     }
 }

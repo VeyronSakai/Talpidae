@@ -23,7 +23,7 @@ namespace Main
 
         protected override void OnAwake()
         {
-            _stageApplicationService.StartStageAsync().Forget();
+            _stageApplicationService.InitializeStageAsync().Forget();
         }
 
         protected override void OnStart()

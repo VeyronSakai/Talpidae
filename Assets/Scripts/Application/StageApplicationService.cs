@@ -1,35 +1,23 @@
 using Cysharp.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.Networking;
+using Infrastructure;
 
 namespace Application
 {
     public sealed class StageApplicationService
     {
-        private const string StartStageEndpoint = "https://talpidae-backend.herokuapp.com/start";
+        private readonly StageNetworkApplicationService _networkApplicationService;
 
+        private const int MaxW = 79;
+        private const int MaxH = 149;
+        
         public StageApplicationService()
         {
+            _networkApplicationService = new StageNetworkApplicationService(new StageFactory());
         }
 
-        public async UniTask StartStageAsync()
+        public async UniTask InitializeStageAsync()
         {
-            var webRequest = UnityWebRequest.Get(StartStageEndpoint);
-
-            await webRequest.SendWebRequest();
-
-            if (webRequest.result == UnityWebRequest.Result.ConnectionError)
-            {
-                //通信失敗
-                Debug.Log(webRequest.error);
-            }
-            else
-            {
-                var response = webRequest.downloadHandler.text;
-
-                //通信成功
-                Debug.Log(webRequest.downloadHandler.text);
-            }
+            var stage = await _networkApplicationService.GetStageStartAsync();
         }
     }
 }
