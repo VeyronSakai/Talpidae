@@ -12,6 +12,8 @@ namespace Domain.Model
             H = h;
             CellType = cellType;
         }
+        
+        // TODO: sakai w, hが限界を超えている場合は例外を投げる
     }
 
     public enum CellType
@@ -21,6 +23,9 @@ namespace Domain.Model
         Hard, // ゴチゴチ
         Treasure, // オタカラ
         Trap, // ワナ
-        Arrow, // ヤジルシ
+        ArrowUp,
+        ArrowDown,
+        ArrowRight,
+        ArrowLeft,
     }
 }
