@@ -18,7 +18,7 @@ namespace Main
         protected override void Inject()
         {
             SetUp();
-            _stageApplicationService = new StageApplicationService();
+            _stageApplicationService = new StageApplicationService(this.transform);
         }
 
         protected override void OnAwake()
