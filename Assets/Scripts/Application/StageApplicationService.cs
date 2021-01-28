@@ -21,7 +21,11 @@ namespace Application
         public async UniTask InitializeStageAsync()
         {
             var stage = await _networkApplicationService.GetStageStartAsync();
+            InstantiateStage(stage);
+        }
 
+        private void InstantiateStage(Stage stage)
+        {
             for (var i = 0; i < Stage.Width; i++)
             {
                 for (var j = 0; j < Stage.Height; j++)
