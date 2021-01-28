@@ -10,11 +10,9 @@ namespace Application
     {
         // private const string StartStageEndpoint = "https://talpidae-backend.herokuapp.com/start";
         private const string StartStageEndpoint = "http://localhost:8080/start";
-        private readonly IStageFactory _stageFactory;
 
-        public StageNetworkApplicationService(IStageFactory stageFactory)
+        public StageNetworkApplicationService()
         {
-            _stageFactory = stageFactory;
         }
 
         public async UniTask<Stage> GetStageStartAsync()
@@ -32,7 +30,35 @@ namespace Application
 
             var stageInfo = JsonUtility.FromJson<StageInfo>(response);
 
-            return _stageFactory.Create(stageInfo);
+            return CreateStage(stageInfo);
+        }
+
+        private Stage CreateStage(StageInfo stageInfo)
+        {
+            var stage = new Stage();
+
+            foreach (var position in stageInfo.positions)
+            {
+                // CellTypeを取得
+                var cellType = position.value switch
+                {
+                    "treasure" => CellType.Treasure,
+                    "arrow-up" => CellType.ArrowUp,
+                    "arrow-down" => CellType.ArrowDown,
+                    "arrow-left" => CellType.ArrowLeft,
+                    "arrow-right" => CellType.ArrowRight,
+                    _ => throw new ArgumentException()
+                };
+
+                var treasureCell = stage.CreateCell(position.w, position.h, cellType);
+
+                if (cellType == CellType.Treasure)
+                {
+                    stage.CreateRockAroundTreasure(treasureCell);
+                }
+            }
+
+            return stage;
         }
     }
 

@@ -12,7 +12,7 @@ namespace Domain.Model
             H = h;
             CellType = cellType;
         }
-        
+
         // TODO: sakai w, hが限界を超えている場合は例外を投げる
     }
 
