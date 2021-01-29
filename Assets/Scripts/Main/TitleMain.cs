@@ -47,9 +47,8 @@ namespace Main
             var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, titleMainTransform);
 
             // Cameraを作る
-            return CameraBuilder.BuildCamera<TitleCamera>(UICommonDef.TitleCameraPrefabPath, cameraRoot.transform);
+            return CameraBuilder.BuildCamera<UICamera>(UICommonDef.UICameraPrefabPath, cameraRoot.transform);
         }
-
 
         private void BuildCanvas(Transform titleMainTransform, ICamera titleUICamera)
         {
