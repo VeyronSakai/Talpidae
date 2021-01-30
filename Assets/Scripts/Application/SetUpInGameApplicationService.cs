@@ -19,22 +19,18 @@ namespace Application
 
         public void SetUp()
         {
-            var inGameMainCamera = BuildCamera(_inGameMainTransform);
-
-            BuildCanvas(_inGameMainTransform, inGameMainCamera);
-        }
-
-        private static ICamera BuildCamera(Transform inGameMainTransform)
-        {
             // CameraのRootとなるGameObjectを作る
-            var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, inGameMainTransform);
+            var cameraRoot = EmptyObjectFactory.Create(UICommonDef.CameraRootName, _inGameMainTransform);
 
             // Cameraを作る
-            return CameraBuilder.BuildCamera<InGameBattleCamera>(UICommonDef.InGameBattleCameraPrefabPath,
+            CameraBuilder.BuildCamera<InGameBattleCamera>(UICommonDef.InGameBattleCameraPrefabPath,
                 cameraRoot.transform);
+            var uiCamera = CameraBuilder.BuildCamera<UICamera>(UICommonDef.UICameraPrefabPath, cameraRoot.transform);
+
+            BuildCanvas(uiCamera);
         }
 
-        private void BuildCanvas(Transform inGameMainTransform, ICamera inGameBattleCamera)
+        private void BuildCanvas(ICamera inGameBattleCamera)
         {
             // CanvasのPrefabのパスのリスト
             var canvasPaths = new List<string>()
@@ -45,7 +41,7 @@ namespace Application
 
             var canvasPathParams = new CanvasPathParams(UICommonDef.CanvasRootName, canvasPaths);
 
-            var canvasRoot = EmptyObjectFactory.Create(canvasPathParams.CanvasRootName, inGameMainTransform);
+            var canvasRoot = EmptyObjectFactory.Create(canvasPathParams.CanvasRootName, _inGameMainTransform);
 
             CanvasBuilder.BuildCanvases(inGameBattleCamera, canvasPathParams, UICommonDef.UITouchBlockWindow,
                 canvasRoot.transform);
