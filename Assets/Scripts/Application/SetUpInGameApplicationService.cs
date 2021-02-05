@@ -10,6 +10,8 @@ namespace Application
 {
     public sealed class SetUpInGameApplicationService
     {
+        public CanvasContainer CanvasContainer { get; private set; }
+
         private readonly Transform _inGameMainTransform;
 
         public SetUpInGameApplicationService(Transform inGameMainTransform)
@@ -43,7 +45,8 @@ namespace Application
 
             var canvasRoot = EmptyObjectFactory.Create(canvasPathParams.CanvasRootName, _inGameMainTransform);
 
-            CanvasBuilder.BuildCanvases(inGameBattleCamera, canvasPathParams, UICommonDef.UITouchBlockWindow,
+            CanvasContainer = CanvasBuilder.BuildCanvases(inGameBattleCamera, canvasPathParams,
+                UICommonDef.UITouchBlockWindow,
                 canvasRoot.transform);
         }
     }
