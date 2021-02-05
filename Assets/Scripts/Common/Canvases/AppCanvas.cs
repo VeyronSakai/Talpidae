@@ -10,6 +10,7 @@ namespace Common.Canvases
         private Transform _canvasTransform;
         private Canvas _rawCanvas;
         private UITouchBlockPresenter _touchBlockPresenter;
+        private ICamera _targetCamera;
 
         public Canvas GetRawCanvas()
         {
@@ -22,7 +23,14 @@ namespace Common.Canvases
         {
             if (_rawCanvas == null) _rawCanvas = GetComponent<UnityEngine.Canvas>();
 
+            _targetCamera = targetCamera;
+
             _rawCanvas.worldCamera = targetCamera.GetRawCamera();
+        }
+
+        public override Camera GetCamera()
+        {
+            return _targetCamera.GetRawCamera();
         }
 
         public override Transform GetTransform()
