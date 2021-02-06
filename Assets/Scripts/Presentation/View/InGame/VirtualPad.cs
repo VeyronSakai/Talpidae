@@ -102,8 +102,7 @@ namespace Presentation.View.InGame
         // スティックの中心を原点とした座標に変換
         private Vector2 GetModifiedPos(Vector2 touchPos)
         {
-            return touchPos + new Vector2(0, _canvasRect.rect.height / 2) -
-                   new Vector2(0, _stickRectTransform.rect.height / 2);
+            return touchPos + new Vector2(0, _canvasRect.rect.height / 2);
         }
     }
 }
