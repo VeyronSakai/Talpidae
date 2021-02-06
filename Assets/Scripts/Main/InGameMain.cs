@@ -42,7 +42,7 @@ namespace Main
 
         protected override void OnUpdate()
         {
-            Debug.Log("x : " + _moveDir.x + "/ y : " + _moveDir.y);
+            // Debug.Log("x : " + _moveDir.x + "/ y : " + _moveDir.y);
         }
 
         private void InitializeInGameBattlePage()
@@ -50,6 +50,12 @@ namespace Main
             var inGameBattlePage =
                 PageFactory<UIInGameBattlePage>.Create(_setUpInGameApplicationService.CanvasContainer);
             inGameBattlePage.MoveDir.Subscribe(x => _moveDir = x).AddTo(this);
+            inGameBattlePage.OnTapCameraButton.Subscribe(_ => OnTapCameraButton()).AddTo(this);
+        }
+
+        private static void OnTapCameraButton()
+        {
+            Debug.Log("カメラボタンが押されました");
         }
     }
 }
