@@ -32,5 +32,10 @@ namespace Presentation.Page.InGame
         {
             _inGameBattlePresenter.UpdateScoreText(score);
         }
+
+        private void UpdateTimeLimitText(uint timeLimitSeconds)
+        {
+            _inGameBattlePresenter.UpdateTimeLimitText(timeLimitSeconds);
+        }
     }
 }

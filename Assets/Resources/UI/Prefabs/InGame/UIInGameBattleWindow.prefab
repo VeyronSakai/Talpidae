@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3012904042713033483}
   - component: {fileID: 4089723809218142117}
   m_Layer: 0
-  m_Name: time_txt
+  m_Name: time_limit_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +595,8 @@ MonoBehaviour:
   closeClip: {fileID: 0}
   virtualPad: {fileID: 5125509590576741912}
   cameraButton: {fileID: 6766706010600603745}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 597719785652387855}
+  timeLimitText: {fileID: 4089723809218142117}
 --- !u!1 &5441443941333741807
 GameObject:
   m_ObjectHideFlags: 0

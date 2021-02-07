@@ -12,6 +12,7 @@ namespace Presentation.View.InGame
         [SerializeField] private VirtualPad virtualPad = default;
         [SerializeField] private Button cameraButton = default;
         [SerializeField] private Text scoreText = default;
+        [SerializeField] private Text timeLimitText = default;
 
         public IObservable<Vector2> MoveDir => virtualPad.MoveDir;
         public IObservable<Unit> OnTapCameraButton => cameraButton.OnClickAsObservable();
@@ -24,6 +25,14 @@ namespace Presentation.View.InGame
         public void UpdateScoreText(Score score)
         {
             scoreText.text = score.ToString();
+        }
+
+        public void UpdateTimeLimitText(uint timeLimitSeconds)
+        {
+            var minutes = timeLimitSeconds / 60;
+            var seconds = timeLimitSeconds % 60;
+
+            timeLimitText.text = $"{minutes.ToString()}:{seconds.ToString()}";
         }
     }
 }
