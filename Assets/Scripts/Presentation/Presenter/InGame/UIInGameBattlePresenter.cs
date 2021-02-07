@@ -26,9 +26,9 @@ namespace Presentation.Presenter.InGame
             TargetView.UpdateScoreText(score);
         }
 
-        public void UpdateTimeLimitText(uint timeLimitSeconds)
+        public void UpdateLimitTimeText(uint leftTime)
         {
-            TargetView.UpdateTimeLimitText(timeLimitSeconds);
+            TargetView.UpdateLimitTimeText(leftTime);
         }
     }
 }
