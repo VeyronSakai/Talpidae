@@ -1,4 +1,5 @@
 using System;
+using Domain.Model;
 using Presentation.View.InGame;
 using UniPresentation.Presenter;
 using UniRx;
@@ -18,6 +19,11 @@ namespace Presentation.Presenter.InGame
         public void InitializeUIInGameBattleWindow(Camera camera)
         {
             TargetView.InitializeVirtualPad(camera);
+        }
+
+        public void UpdateScoreText(Score score)
+        {
+            TargetView.UpdateScoreText(score);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using Domain.Model;
 using Presentation.Def;
 using Presentation.Presenter.InGame;
 using Presentation.View.InGame;
@@ -16,7 +17,6 @@ namespace Presentation.Page.InGame
 
         private readonly UIInGameBattlePresenter _inGameBattlePresenter;
 
-
         public UIInGameBattlePage(CanvasContainer canvasContainer) : base(canvasContainer)
         {
             _inGameBattlePresenter =
@@ -26,6 +26,11 @@ namespace Presentation.Page.InGame
             _inGameBattlePresenter.SetActiveView(true);
 
             _inGameBattlePresenter.InitializeUIInGameBattleWindow(canvasContainer.Canvases[0].GetCamera());
+        }
+
+        private void UpdateScoreText(Score score)
+        {
+            _inGameBattlePresenter.UpdateScoreText(score);
         }
     }
 }
