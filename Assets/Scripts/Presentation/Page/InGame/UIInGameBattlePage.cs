@@ -1,4 +1,5 @@
 using System;
+using Application;
 using Domain.Model;
 using Presentation.Def;
 using Presentation.Presenter.InGame;
@@ -10,7 +11,7 @@ using UnityEngine;
 
 namespace Presentation.Page.InGame
 {
-    public sealed class UIInGameBattlePage : PageBase
+    public sealed class UIInGameBattlePage : PageBase, IUIInGameBattlePage
     {
         public IObservable<Vector2> MoveDir => _inGameBattlePresenter.MoveDir;
         public IObservable<Unit> OnTapCameraButton => _inGameBattlePresenter.OnTapCameraButton;
@@ -31,6 +32,11 @@ namespace Presentation.Page.InGame
         private void UpdateScoreText(Score score)
         {
             _inGameBattlePresenter.UpdateScoreText(score);
+        }
+
+        public void UpdateLimitTimeText(uint leftTime)
+        {
+            _inGameBattlePresenter.UpdateLimitTimeText(leftTime);
         }
     }
 }

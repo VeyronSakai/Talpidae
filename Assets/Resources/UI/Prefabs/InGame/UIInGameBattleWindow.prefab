@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2330901914292711409}
   - component: {fileID: 289635729405300482}
   m_Layer: 0
-  m_Name: time_limit_base
+  m_Name: limit_time_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3012904042713033483}
   - component: {fileID: 4089723809218142117}
   m_Layer: 0
-  m_Name: time_txt
+  m_Name: limit_time_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +595,8 @@ MonoBehaviour:
   closeClip: {fileID: 0}
   virtualPad: {fileID: 5125509590576741912}
   cameraButton: {fileID: 6766706010600603745}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 597719785652387855}
+  limitTimeText: {fileID: 4089723809218142117}
 --- !u!1 &5441443941333741807
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8752555702478674046}
   m_Layer: 0
-  m_Name: time_limit_elm
+  m_Name: limit_time_elm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
